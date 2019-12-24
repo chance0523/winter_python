@@ -30,7 +30,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../191224mulcam/day1/퀴즈1.py" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Python.p1224_3">
+  <component name="RunManager" selected="Python.퀴즈1">
     <configuration name="퀴즈1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="e1224" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.p1224_3" />
         <item itemvalue="Python.퀴즈1" />
+        <item itemvalue="Python.p1224_3" />
         <item itemvalue="Python.p1224_2" />
       </list>
     </recent_temporary>
@@ -165,22 +165,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="171" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1577170276938" />
-    <state width="1579" height="179" key="GridCell.Tab.0.bottom" timestamp="1577171364122">
+    <state width="1579" height="179" key="GridCell.Tab.0.bottom" timestamp="1577173235712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577171364122" />
-    <state width="1579" height="179" key="GridCell.Tab.0.center" timestamp="1577171364122">
+    <state width="1579" height="179" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577173235712" />
+    <state width="1579" height="179" key="GridCell.Tab.0.center" timestamp="1577173235712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577171364122" />
-    <state width="1579" height="179" key="GridCell.Tab.0.left" timestamp="1577171364122">
+    <state width="1579" height="179" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577173235712" />
+    <state width="1579" height="179" key="GridCell.Tab.0.left" timestamp="1577173235712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577171364121" />
-    <state width="1579" height="179" key="GridCell.Tab.0.right" timestamp="1577171364122">
+    <state width="1579" height="179" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577173235712" />
+    <state width="1579" height="179" key="GridCell.Tab.0.right" timestamp="1577173235712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577171364122" />
+    <state width="1579" height="179" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577173235712" />
     <state x="301" y="0" key="SettingsEditor" timestamp="1577170278361">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

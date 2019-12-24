@@ -89,6 +89,7 @@ print('순서 교체 : number {1} color {0}'.format(color, myNumber))
 # 초기값 다시 지정
 print('이름지정 : number {myNumber} color {color}'.format(myNumber=100, color='red'))
 
+# 여백
 print('-----------------')
 print('... {} ...'.format('hello world'))
 print('... {:>30} ...'.format('hello world'))
@@ -96,3 +97,35 @@ print('... {:<30} ...'.format('hello world'))
 print('... {:^30} ...'.format('hello world'))
 print('... {:*>30} ...'.format('hello world'))
 print('... {:*<30} ...'.format('hello world'))
+
+print('----------------')
+pi2 = 3.141592
+print('pi : ', format(pi2))
+print('pi : ', format(pi2, '11.3f'))
+print('pi : {0:2.1f}'.format(pi2))
+
+print('-' * 20)
+fruit = "사과, 바나나, 홍시"
+print("{} {{...}}".format(fruit))
+
+# f string formatting : version 3.6 ++
+# f' 문자열 {변수명이나 변수를 이용한 수식}
+print('-' * 20)
+stName1 = '나은'
+stName2 = '건후'
+age = 10
+print(f'학생1 {stName1} 학생2 {stName2}')
+print('학생1 {} 학생2 {}'.format(stName1, stName2))
+print(f'나이1 {age}, 나이2 {age + 5}')
+
+height = 155.67890
+print(f'키는? {height}')
+print(f'키는? {height:.2f}')
+print(f'키는? {height:10.1f}')
+
+print('-'*20)
+message='Hello World'
+print(f' *** {message:>30} ***')
+print(f' *** {message:<30} ***')
+print(f' *** {message:^30} ***')
+print(f' *** {message:#^30} ***')
