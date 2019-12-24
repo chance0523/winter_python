@@ -86,4 +86,13 @@ print('color {} number {}'.format(color, myNumber))
 # index
 print('순서 교체 : number {1} color {0}'.format(color, myNumber))
 
+# 초기값 다시 지정
 print('이름지정 : number {myNumber} color {color}'.format(myNumber=100, color='red'))
+
+print('-----------------')
+print('... {} ...'.format('hello world'))
+print('... {:>30} ...'.format('hello world'))
+print('... {:<30} ...'.format('hello world'))
+print('... {:^30} ...'.format('hello world'))
+print('... {:*>30} ...'.format('hello world'))
+print('... {:*<30} ...'.format('hello world'))
