@@ -25,3 +25,48 @@ yesterday = '수요일'
 # 오늘은 화요일입니다.
 print('오늘은', today, '입니다.')
 print('오늘은 %s입니다.' % today)
+print('오늘은 %s입니다. 내일은 %s입니다.' % (today, yesterday))
+
+myNum = 16
+print('10진수 : %d' % myNum)
+print('16진수 : %x' % myNum)
+print('8진수 : %o' % myNum)
+print('실수 : %f' % myNum)
+print('소숫점 두자리 : %.2f' % myNum)
+
+pi = 3.141592
+print('pi : %f' % pi)
+print('pi : %.3f' % pi)
+print('pi : %10.2f' % pi)
+print('pi : %3.5f' % pi)
+print('pi : %15.1f' % pi)
+
+print('\n' * 5)
+# quiz
+# 두개의 숫자를 입력받아 다음과 같이 출력하여라
+'''
+print('-'*20)
+print('\t\tquiz')
+print('-'*20)
+a1 = input('숫자1을 입력하세요...')
+a2 = input('숫자2를 입력하세요...')
+
+a1=int(a1)
+a2=float(a2)
+
+print('입력받은 숫자1은 %d입니다.' % a1)
+print('입력받은 숫자1은 8진수로 %o입니다.' % a1)
+print('입력받은 숫자1은 16진수로 %x입니다.' % a1)
+print('입력받은 숫자2는 %.1f입니다.' % a2)
+'''
+
+todayM = 0.0005
+# print('오늘의 미세먼지 농도는 %f%입니다.'%todayM) <- TypeError 발생
+print('오늘의 미세먼지 농도는 %f%%입니다.' % todayM)
+
+userName='홍길동'
+userNumber=123.45
+print('user Name : %10s ** '%userName)
+print('user Name : %-10s ** '%userName)
+print('user Name : %10d ** '%userNumber)
+print('user Name : %-10f ** '%userNumber)
