@@ -52,3 +52,19 @@ print('user2 = ',user2)
 user1,user2=user2,user1
 print('user1 = ',user1)
 print('user2 = ',user2)
+
+# 변수명 정의방식
+# 카멜 표기법 : 대문자, 소문자 섞어서
+# userAge
+# 스네이크 기법 : _, - 단어 연결
+# user_age
+'''
+클래스명은 첫글자를 대문자로
+함수명은 소문자로 표시
+변수명은 소문자로 시작
+예약어는 변수명으로 사용할 수 없다
+파이썬 예약어(keyword) 출력하기
+'''
+import keyword
+print(keyword.kwlist)
+print(len(keyword.kwlist))
