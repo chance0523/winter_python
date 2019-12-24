@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
-  <component name="RunManager" selected="Python.p1224_2">
+  <component name="RunManager" selected="Python.p1224_3">
     <configuration name="p1224_1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="e1224" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,8 +67,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="p1224_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="e1224" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/p1224_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.p1224_3" />
         <item itemvalue="Python.p1224_2" />
       </list>
     </recent_temporary>
@@ -111,22 +133,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="171" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1577153130294" />
-    <state width="1579" height="179" key="GridCell.Tab.0.bottom" timestamp="1577165026816">
+    <state width="1579" height="179" key="GridCell.Tab.0.bottom" timestamp="1577165853105">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577165026816" />
-    <state width="1579" height="179" key="GridCell.Tab.0.center" timestamp="1577165026816">
+    <state width="1579" height="179" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577165853105" />
+    <state width="1579" height="179" key="GridCell.Tab.0.center" timestamp="1577165853105">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577165026816" />
-    <state width="1579" height="179" key="GridCell.Tab.0.left" timestamp="1577165026816">
+    <state width="1579" height="179" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577165853105" />
+    <state width="1579" height="179" key="GridCell.Tab.0.left" timestamp="1577165853105">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577165026816" />
-    <state width="1579" height="179" key="GridCell.Tab.0.right" timestamp="1577165026816">
+    <state width="1579" height="179" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577165853105" />
+    <state width="1579" height="179" key="GridCell.Tab.0.right" timestamp="1577165853105">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="179" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577165026816" />
+    <state width="1579" height="179" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577165853105" />
     <state x="301" y="0" key="SettingsEditor" timestamp="1577161027069">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
