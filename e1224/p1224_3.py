@@ -64,9 +64,26 @@ todayM = 0.0005
 # print('오늘의 미세먼지 농도는 %f%입니다.'%todayM) <- TypeError 발생
 print('오늘의 미세먼지 농도는 %f%%입니다.' % todayM)
 
-userName='홍길동'
-userNumber=123.45
-print('user Name : %10s ** '%userName)
-print('user Name : %-10s ** '%userName)
-print('user Name : %10d ** '%userNumber)
-print('user Name : %-10f ** '%userNumber)
+userName = '홍길동'
+userNumber = 123.45
+print('user Name : %10s ** ' % userName)
+print('user Name : %-10s ** ' % userName)
+print('user Name : %10d ** ' % userNumber)
+print('user Name : %-15f ** ' % userNumber)
+
+print('\n' * 5)
+'''
+format을 이용한 출력방식
+'문자열1 {} {}'.format(변수1, 변수2)
+'문자열1 {숫자나 변수} {숫자나 변수} 문자열2'.format(변수1, 변수2)
+'''
+
+color = 'blue'
+myNumber = 7
+
+print('color {} number {}'.format(color, myNumber))
+
+# index
+print('순서 교체 : number {1} color {0}'.format(color, myNumber))
+
+print('이름지정 : number {myNumber} color {color}'.format(myNumber=100, color='red'))
