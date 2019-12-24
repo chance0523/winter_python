@@ -95,4 +95,3 @@ print(stName1 is stName2)
 print(stName1 is not stName2)
 print(stName1 is stName3)
 # 당연하게 대소문자 구분
-
