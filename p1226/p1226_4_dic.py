@@ -146,3 +146,14 @@ print(f'튜플로 변경 = {tuple(dict7)}, type = {type(tuple(dict7))}')
 # 딕셔너리 값으로만 이루어진 튜플 생성
 print(f'dict7.values()? {dict7.values()}')
 print(f'tuple(dict7.values())? {tuple(dict7.values())}')
+
+# 딕셔너리 리스트
+# 리스트 안에 딕셔너리가 있는 구조
+dictList = [{'a': 'apple', 'v': 'victory'},
+            {100: '백', 200: '이백'},
+            {'user1': '김철수', 'user2': '고소영'}
+            ]
+print(f'dictList = {dictList}')
+print(f'dictList[0] = {dictList[0]}')
+print(f'dictList[0]["a"] = {dictList[0]["a"]}')
+print(f'dictList[2][\'user1\'] = {dictList[2]["user1"]}')
