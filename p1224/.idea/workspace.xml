@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1eb16ee3-6d25-47f2-9edf-2a3d09a2163d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p1224_quiz.py" beforeDir="false" afterPath="$PROJECT_DIR$/p1224_quiz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p1226/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p1226/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p1226/p1226_4_dic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../p1226/p1226_4_dic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +32,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../191224mulcam/day1/퀴즈1.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Python.p1224_quiz">
