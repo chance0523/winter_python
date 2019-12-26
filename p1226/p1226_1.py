@@ -80,7 +80,53 @@ numList2.pop()
 print(f'numList2 = {numList2}')
 print(f'pop value = {numList2.pop(3)}')
 print(f'numList2 = {numList2}')
-numList2.clear()
-print(f'numList2 = {numList2}')
-# del numList2
+# numList2.clear()
 # print(f'numList2 = {numList2}')
+# numList2 = []
+# del numList2
+# print(f'numList2 = {numList2}') -> ERROR!!!
+del numList2[1]
+print(f'numList2 = {numList2}')
+
+# 리스트 전체 길이 출력
+print(f'len(numList2) = {len(numList2)}')
+# 리스트 데이터형 출력
+print(f'len(numList2) = {type(numList2)}')
+
+# 입력받은 값으로 리스트를 생성하여라
+jobList = []
+print(f'jobList = {jobList}')
+'''
+jobList.append(input('data1 => '))
+jobList.append(input('data2 => '))
+jobList.append(input('data3 => '))
+'''
+print(f'jobList = {jobList}')
+
+sampleList1 = ['나', '가', 'abc', '100']
+sampleList2 = ['나', True, 'abc', 100]
+print(f'sampleList1 = {sampleList1}')
+sampleList1.sort()
+print(f'sort sampleList1 = {sampleList1}')
+sampleList1.reverse()
+print(f'reverse sampleList1 = {sampleList1}')
+# sampleList2.sort()
+# print(f'sort sampleList2 = {sampleList2}') -> TYPE ERROR!!!
+
+# list.count(값)
+# 중복값이 몇개인가?
+sampleList3 = [100, '나', 100, True, 'abc', 100]
+print(f'sampleList = {sampleList3}')
+print(f'sampleList.count(100) = {sampleList3.count(100)}')
+
+# list.index(값)
+# 값에 해당하는 요소가 몇번째에 위치하고 있는가?
+jobList2 = ['Python', 'DB', 'Flask']
+print(f'jobList2 = {jobList2}')
+print(f'jobList2.index("DB") = {jobList2.index("DB")}')  # f format을 쓰면서 ''를 썻기 때문에 index 안에는 ""를 쓴다
+
+# 여러개의 요소를 한꺼번에 리스트에 추가하고 싶다면?
+# list.extend([값1,값2,...])
+print(f'before extend jobList2 = {jobList2}')
+jobList2.extend(['Django','JavaScript'])
+print(f'after extend jobList2 = {jobList2}')
