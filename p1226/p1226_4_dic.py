@@ -53,4 +53,17 @@ dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'drama'}
 '''
 
 # 딕셔너리 요소 삭제
-# 딕셔너리 변수
+# 딕셔너리변수.clear()
+# 딕셔너리변수.pop(키값)
+# del 딕셔너리변수
+# del 딕셔너리변수[키값]
+print('-'*30)
+print(f'dict5 = {dict5}')
+dict5.pop('a')
+print(f'dict5 = {dict5}')
+del dict5['c']
+print(f'dict5 = {dict5}')
+dict5.clear()
+print(f'dict5 = {dict5}')
+del dict5
+# print(f'dict5 = {dict5}') => ERROR!!! 이미 지워짐
