@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a4332d-524e-4cf6-8527-e94ba2133a93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/p1226_4_dic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../p1224/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../p1224/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p1224/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p1226_3_tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/p1226_3_tuple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p1226_4_dic.py" beforeDir="false" afterPath="$PROJECT_DIR$/p1226_4_dic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../p1224" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager" selected="Python.p1226_4_dic">
@@ -177,42 +179,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="579" y="176" key="FileChooserDialogImpl" timestamp="1577338323768">
+    <state x="579" y="176" key="FileChooserDialogImpl" timestamp="1577341937811">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="579" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1577338323768" />
-    <state width="1579" height="221" key="GridCell.Tab.0.bottom" timestamp="1577341303059">
+    <state x="579" y="176" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1577341937811" />
+    <state width="1579" height="221" key="GridCell.Tab.0.bottom" timestamp="1577342087158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577341303059" />
-    <state width="1579" height="221" key="GridCell.Tab.0.center" timestamp="1577341303059">
+    <state width="1579" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577342087158" />
+    <state width="1579" height="221" key="GridCell.Tab.0.center" timestamp="1577342087158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577341303059" />
-    <state width="1579" height="221" key="GridCell.Tab.0.left" timestamp="1577341303059">
+    <state width="1579" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1577342087158" />
+    <state width="1579" height="221" key="GridCell.Tab.0.left" timestamp="1577342087157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577341303059" />
-    <state width="1579" height="221" key="GridCell.Tab.0.right" timestamp="1577341303059">
+    <state width="1579" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1577342087157" />
+    <state width="1579" height="221" key="GridCell.Tab.0.right" timestamp="1577342087158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577341303059" />
-    <state width="1579" height="275" key="GridCell.Tab.1.bottom" timestamp="1577324774327">
+    <state width="1579" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1577342087158" />
+    <state width="1579" height="275" key="GridCell.Tab.1.bottom" timestamp="1577341506624">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577324774327" />
-    <state width="1579" height="275" key="GridCell.Tab.1.center" timestamp="1577324774327">
+    <state width="1579" height="275" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1577341506624" />
+    <state width="1579" height="275" key="GridCell.Tab.1.center" timestamp="1577341506624">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1577324774327" />
-    <state width="1579" height="275" key="GridCell.Tab.1.left" timestamp="1577324774327">
+    <state width="1579" height="275" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1577341506624" />
+    <state width="1579" height="275" key="GridCell.Tab.1.left" timestamp="1577341506624">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1577324774327" />
-    <state width="1579" height="275" key="GridCell.Tab.1.right" timestamp="1577324774327">
+    <state width="1579" height="275" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1577341506624" />
+    <state width="1579" height="275" key="GridCell.Tab.1.right" timestamp="1577341506624">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1577324774327" />
+    <state width="1579" height="275" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1577341506624" />
     <state x="293" y="71" key="SettingsEditor" timestamp="1577338343594">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
