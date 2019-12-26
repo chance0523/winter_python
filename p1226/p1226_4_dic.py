@@ -37,7 +37,7 @@ dict4 = {'a': 'africa', 'c': 'coffee'}
 키 값이 같으면 덮어 씌워짐.
 '''
 
-dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee','d':'dry'}
+dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'dry'}
 print(f'dict5 = {dict5}')
 '''
 dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'dry'}
@@ -46,7 +46,7 @@ dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'dry'}
 
 # 딕셔너리 값 교체
 # 딕셔너리[키값] = 값
-dict5['d']='drama'
+dict5['d'] = 'drama'
 print(f'dict5 = {dict5}')
 '''
 dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'drama'}
@@ -57,7 +57,7 @@ dict5 = {'a': 'africa', 'af': 'africa', 'c': 'coffee', 'd': 'drama'}
 # 딕셔너리변수.pop(키값)
 # del 딕셔너리변수
 # del 딕셔너리변수[키값]
-print('-'*30)
+print('-' * 30)
 print(f'dict5 = {dict5}')
 dict5.pop('a')
 print(f'dict5 = {dict5}')
@@ -67,3 +67,21 @@ dict5.clear()
 print(f'dict5 = {dict5}')
 del dict5
 # print(f'dict5 = {dict5}') => ERROR!!! 이미 지워짐
+
+# 딕셔너리 함수
+# 딕셔너리 변수.values() : 값만 표시
+# 딕셔너리변수.keys() : 키값만 표시
+# 딕셔너리변수.items() : 전체 표시
+dict5 = {'a': 'africa', 's': 'say', 'c': 'coffee', 'd': 'drama', 'y': 'yes'}
+print(f'dict5 = {dict5}')
+print(f'dict5.values() = {dict5.values()}')
+print(f'dict5.keys() = {dict5.keys()}')
+print(f'dict5.items() = {dict5.items()}')
+
+# 딕셔너리에 키값만 리스트로 만들어서 마지막 키값 조회
+keysList = dict5.keys()
+print(f'keysList = {keysList}')
+# print(f'keysList[-1] = {keysList[-1]}') => TYPE ERROR !!!
+keysList = list(keysList) # list로 바꿔줌
+print(f'keysList = {keysList}')
+print(f'keysList[-1] = {keysList[-1]}')
