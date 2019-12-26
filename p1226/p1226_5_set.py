@@ -34,3 +34,64 @@ print(f'after update = {set4}')
 # 집합의 요소 삭제
 set4.remove(1)
 print(f'after remove 1 = {set4}')
+
+del set4
+# print(f'after del = {set4}') => ERROR!!!
+
+# 집합의 연산
+# +, *
+userSet1 = set(['박', '이', '김', '최'])
+userSet2 = set(['신', '김', '선우', '최'])
+print('userSet1 = {}'.format(userSet1))
+print('userSet2 = {}'.format(userSet2))
+# 합집합
+# set3 = set1 | set2
+# set4 = set1.union(set2)
+print('---합집합---')
+userSet3 = userSet1 | userSet2
+userSet4 = userSet1.union(userSet2)
+print('userSet3 = {}'.format(userSet3))
+print('userSet4 = {}'.format(userSet4))
+
+# 교집합
+# set3 = set1 & set2
+# set4 = set1.intersection(set2)
+print('---교집합---')
+userSet3 = userSet1 & userSet2
+userSet4 = userSet1.intersection(userSet2)
+print('userSet3 = {}'.format(userSet3))
+print('userSet4 = {}'.format(userSet4))
+
+# 차집합
+# set3 = set1 - set2
+# set4 = set1.difference(set2)
+print('---차집합---')
+userSet3 = userSet1 - userSet2
+userSet4 = userSet1.difference(userSet2)
+print('userSet3 = {}'.format(userSet3))
+print('userSet4 = {}'.format(userSet4))
+
+# 캐스팅
+# 리스트, 문자열, 튜플 -> 집합
+# set(리스트, 문자열, 튜플)
+
+# 집합 -> 리스트
+# list(집합변수)
+userList1 = list(userSet1)
+print(f'userSet1 = {userSet1}, type = {type(userSet1)}')
+print(f'userList1 = {userList1}, type = {type(userList1)}')
+
+# 집합 -> 튜플
+userTuple1 = tuple(userSet1)
+print(f'userSet1 = {userSet1}, type = {type(userSet1)}')
+print(f'userTuple1 = {userTuple1}, type = {type(userTuple1)}')
+
+# 집합 -> 문자열
+userStr1 = str(userSet1)
+print(f'userSet1 = {userSet1}, type = {type(userSet1)}')
+print(f'userStr1 = {userStr1}, type = {type(userStr1)}')
+
+# 집합 -> 딕셔너리
+userDict1 = dict(enumerate(userSet1))
+print(f'userSet1 = {userSet1}, type = {type(userSet1)}')
+print(f'userDict1 = {userDict1}, type = {type(userDict1)}')
