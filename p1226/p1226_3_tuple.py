@@ -117,3 +117,27 @@ foodList = [foodT1, foodT2]
 print(f'foodT1 = {foodList}, type = {type(foodList)}')
 print(f'foodT1 = {foodList[0]}, type = {type(foodList[0])}')
 print(f'foodT1 = {foodList[1]}, type = {type(foodList[1])}')
+
+# quiz #
+'''
+아래와 같이 튜플을 정의한 후 출력한다.
+튜플 리스트 : ('강아지', '토끼', '돼지', '곰')
+튜플 요소 추가 후 : ('강아지', '토끼', '돼지', '곰', '호랑이')
+튜플의 0~3번째 요소 표시 : ('강아지', '토끼', '돼지', '곰)
+'강아지' 요소의 위치값은?
+튜플을 문자열로 변환하여 출력 : 강아지, 토끼, 돼지, ...
+튜플을 리스트로 변환하여 출력 : 
+'''
+
+print('---quiz---')
+animal=('강아지', '토끼', '돼지', '곰')
+print(f'튜플 리스트 : {animal}')
+animal+=('호랑이',)
+print(f'튜플 요소 추가 후 : {animal}')
+print(f'튜플의 0~3번째 요소 표시 : {animal[:4]}')
+print(f'"강아지" 요소의 위치값은? : {animal.index("강아지")}')
+strAnimal=', '.join(animal)
+listAnimal=list(animal)
+print(f'튜플을 문자열로 변환하여 출력 : {strAnimal}')
+print(f'튜플을 리스트로 변환하여 출력 : {listAnimal}')
+
