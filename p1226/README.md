@@ -1,5 +1,5 @@
 # 12/26
-### list
-### tuple
-### dictionary
-### set
+* ### list
+* ### tuple
+* ### dictionary
+* ### set
