@@ -111,3 +111,9 @@ list2 = list(list1Tuple)
 print(f'list2 = {list2}, type = {type(list2)}')
 
 # 튜플 리스트
+foodT1 = ('고구마', '감자')
+foodT2 = ('짬뽕', '짜장면', '라면')
+foodList = [foodT1, foodT2]
+print(f'foodT1 = {foodList}, type = {type(foodList)}')
+print(f'foodT1 = {foodList[0]}, type = {type(foodList[0])}')
+print(f'foodT1 = {foodList[1]}, type = {type(foodList[1])}')
