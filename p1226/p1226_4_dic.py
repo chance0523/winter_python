@@ -82,6 +82,67 @@ print(f'dict5.items() = {dict5.items()}')
 keysList = dict5.keys()
 print(f'keysList = {keysList}')
 # print(f'keysList[-1] = {keysList[-1]}') => TYPE ERROR !!!
-keysList = list(keysList) # list로 바꿔줌
+keysList = list(keysList)  # list로 바꿔줌
 print(f'keysList = {keysList}')
 print(f'keysList[-1] = {keysList[-1]}')
+
+print('--- 캐스팅 ---')
+# 딕셔너리 => 리스트
+dict6 = {'a': 'africa', 's': 'say', 'c': 'coffee', 'd': 'drama', 'y': 'yes'}
+# 값만 모아서 리스트로
+dict6ValuesList = list(dict6.values())
+print(f'dict6ValuesList = {dict6ValuesList}, type = {type(dict6ValuesList)}')
+
+# 키만 모아서 리스트로
+dict6ValuesList = list(dict6.keys())
+print(f'dict6ValuesList = {dict6ValuesList}')
+dict6ValuesList = list(dict6)
+print(f'dict6ValuesList = {dict6ValuesList}')
+
+# 리스트 => 딕셔너리 : (인덱싱 숫자가 키가 됨)
+# dict()
+# enumerate() : 리스트, 문자열, 튜플 같은 자료형을 enumerate 객체로 반환
+# enumerate 객체의 요소는 딕셔너리 스타일, 키값은 숫자로 표시
+myList = ['Red', 'Blue', 'Green']
+print(f'myList = {myList}')
+# myDict = dict(myList) -> ERROR!!!
+temp = enumerate(myList)
+print(f'temp = {temp}')
+# temp = <enumerate object at 0x00000144AF7D4E00>
+# for i in temp:
+#     print(i)
+'''
+(0, 'Red')
+(1, 'Blue')
+(2, 'Green')
+'''
+# 한 번 풀리면 다시 안 묶임 !!!
+for key, value in temp:
+    print(key, value)
+'''
+0 Red
+1 Blue
+2 Green
+'''
+# print(f'myDict = {myDict}')
+
+# 리스트 => enumerate() => dict()
+myList2 = ['Red', 'Blue', 'Green']
+myDict2 = dict(enumerate(myList2))
+print(f'myDict2 = {myDict2}')
+print(f'myDict2 type = {type(myDict2)}')
+
+# 딕셔너리 => 문자열
+# str(딕셔너리변수) => { : , :  , ...}
+# 구분자.join(딕셔너리변수) => 키값으로 생성
+dict7 = {'a': 'africa', 's': 'say', 'c': 'coffee', 'd': 'drama', 'y': 'yes'}
+print(f'dict7 = {dict7}, type = {type(dict7)}')
+print(f'문자열로 변경 = {str(dict7)}, type = {type(str(dict7))}')
+print(f'문자열로 변경 = {",".join(dict7)}, type = {type(",".join(dict7))}')
+
+# 딕셔너리 => 튜플
+# tuple() => 키값으로 이루어진 튜플
+print(f'튜플로 변경 = {tuple(dict7)}, type = {type(tuple(dict7))}')
+# 딕셔너리 값으로만 이루어진 튜플 생성
+print(f'dict7.values()? {dict7.values()}')
+print(f'tuple(dict7.values())? {tuple(dict7.values())}')
