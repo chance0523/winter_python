@@ -55,3 +55,24 @@ print(f'userAdder = {userAdder}')
 print(f'userAdder[0] = {userAdder[0]}')
 print(f'userAdder[2] = {userAdder[2]}')
 print(f'userAdder[2][0] = {userAdder[2][0]}')
+
+# quiz #
+# 아래의 리스트를 이용하여 grade 리스트를 생성하고 합계와 평균을 과목별로 출력한다.
+# 평균은 소숫점 2번째 자리까지 출력한다.
+print('---quiz---')
+kor = [100, 80, 85]
+math = [55, 70, 35]
+eng = [80, 80, 100]
+python = [90, 70, 80]
+
+print('result')
+print(f'kor : 합계 = %d, 평균 = %.2f' % ((kor[0] + kor[1] + kor[2]), ((kor[0] + kor[1] + kor[2]) / len(kor))))
+print(f'math : 합계 = %d, 평균 = %.2f' % ((math[0] + math[1] + math[2]), ((math[0] + math[1] + math[2]) / len(math))))
+print(f'eng : 합계 = %d, 평균 = %.2f' % ((eng[0] + eng[1] + eng[2]), ((eng[0] + eng[1] + eng[2]) / len(eng))))
+print(f'python : 합계 = %d, 평균 = %.2f' % ((python[0] + python[1] + python[2]), ((python[0] + python[1] + python[2]) / len(python))))
+grade = [kor,math,eng,python]
+print(grade)
+print(f'kor : 합계 = %d, 평균 = %.2f'%(grade[0][0]+grade[0][1]+grade[0][2],(grade[0][0]+grade[0][1]+grade[0][2])/3))
+print(f'math : 합계 = %d, 평균 = %.2f'%(grade[1][0]+grade[1][1]+grade[1][2],(grade[1][0]+grade[1][1]+grade[1][2])/3))
+print(f'eng : 합계 = %d, 평균 = %.2f'%(grade[2][0]+grade[2][1]+grade[2][2],(grade[2][0]+grade[2][1]+grade[2][2])/3))
+print(f'python : 합계 = %d, 평균 = %.2f'%(grade[3][0]+grade[3][1]+grade[3][2],(grade[3][0]+grade[3][1]+grade[3][2])/3))
