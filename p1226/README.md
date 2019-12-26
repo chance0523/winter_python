@@ -88,14 +88,16 @@
 
   - #### create / indexing
 
-  ```python
-  myDict = {100: '백', 200: '이백', 300: '삼백'}      # create
-  myDict = {'a': 'africa', 'c': 'cat', 'd': 'drama'} # create
-  myDict[100], myDict['c']            # indexing : key로 조회
-  myDict = {'a': 'africa', 'c': 'cat', 'c': 'cafe'}  # 중복키
-  # -> dict4 = {'a': 'africa', 'c': 'cafe'}
-  # 키 값이 같으면 덮어 씌워짐.
-  ```
+    ```python
+     myDict = {100: '백', 200: '이백', 300: '삼백'}
+     myDict =
+     {'a': 'africa', 'c': 'cat', 'd': 'drama'} # create
+     myDict[100], myDict['c']   # indexing : key로 조회
+     # 중복키
+     myDict = {'a': 'africa', 'c': 'cat', 'c': 'cafe'}
+     # -> dict4 = {'a': 'africa', 'c': 'cafe'}
+     # 키 값이 같으면 덮어 씌워짐.
+    ```
 
   - #### function
     ```python
