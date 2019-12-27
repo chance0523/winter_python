@@ -22,3 +22,24 @@ sum = 0
 for i in range(1, 101):
     sum += i
 print('1~100까지의 합 :', sum)
+
+# for문에서 조건문 실행
+# 한줄에 1~25까지 5개씩 출력하기
+'''
+1 2 3 4 5
+6 7 8 9 10
+...
+21 22 23 24 25
+'''
+for i in range(1, 26):
+    if i % 5 == 0:
+        print(i)
+    else:
+        print(i, end=' ')
+
+# 1~25에서 5의 배수만 빼고 출력
+for i in range(1, 25):
+    if i % 5 == 0:
+        continue
+    else:
+        print(i, end=' ')
