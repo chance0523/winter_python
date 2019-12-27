@@ -41,14 +41,15 @@
         print('yes')
         ```
 - ### while
-  - #### 조건이 True일 동안에 반복 수행
-    + ##### 기본 while문
-    ```python
-    sum = 0
-    a = 1
-    while a <= 100:
-        sum += a
-        a += 1
-    print(sum)  # 5050
-    ```
+  - #### while
+    + ##### 조건이 True일 동안에 반복 수행
+    + ##### while
+      ```python
+      sum = 0
+      a = 1
+      while a <= 100:
+          sum += a
+          a += 1
+      print(sum)  # 5050
+      ```
   

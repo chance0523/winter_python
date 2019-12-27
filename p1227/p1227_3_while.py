@@ -48,3 +48,21 @@ while num1 < 5:
         print('Hello Python')
         num2 += 1
     num1 += 1
+
+# while문을 이용한 (리스트, 딕셔너리, 문단, 집합, 튜플 아이템 출력)
+i = 0
+list1 = ['사과', '바나나', '수박', '포도']
+while i < len(list1):
+    print(i, '번째 요소는', list1[i])
+    i += 1
+print('-' * 30, '\n\n')
+
+# 짝수번째 글자만 출력하기
+i = 0
+txt1 = '가나다라마바사'
+while i < len(txt1):
+    print(i, '번째 요소는', txt1[i])
+    i += 2
+
+# 딕셔너리 구조에서 키와 값을 분리시켜서 출력하기
+
