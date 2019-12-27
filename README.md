@@ -4,4 +4,3 @@
 
 * ### 2019.12.24 ~ : PYTHON PROGRAMMING
   - ##### [I/O, variable](https://github.com/samuel950523/winter_python/tree/master/p1224) / [list, tuple, dictionary, set](https://github.com/samuel950523/winter_python/tree/master/p1226) / [if, while, for](https://github.com/samuel950523/winter_python/tree/master/p1227)
-

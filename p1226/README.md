@@ -4,7 +4,7 @@
 
   - #### create / indexing / slicing
     ```python
-    myList = [1, 2, 3, 4, 5]  # create`
+    myList = [1, 2, 3, 4, 5]  # create
     myList[0], myList[-1]     # indexing
     myList[:4], myList[1::2]  # slicing
     ```
