@@ -95,9 +95,15 @@
       
       numList = [i * j for i in range(2, 11) for j in range(1, 10)] # 구구단
       ``` 
-    + ##### for문으로 list돌기
+    + ##### for문으로 list돌기 (문자열, 튜플, 딕셔너리(키 or 값)도 가능)
       ```python
+      # list
       myList = [2, 3, 5, 7, 11]
       for i in myList:
-      print(i, end=' ')
+          print(i, end=' ')
+      
+      # string
+      myText = '가나다라마바사'
+      for i in myText:
+          print(i, end=' ')
       ```
