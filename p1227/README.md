@@ -29,15 +29,15 @@
       ```
     + ##### in, not in을 활용한 if문
       ```python
-      if 'a' in 'banana':     # 'banana'에 'a'가 들어있나요?
+      if 'a' in 'banana':             # 'banana'에 'a'가 들어있나요?
         print('yes')
-      if 'b' not in 'Python': # 'Python'에 'b'가 들어있나요?
+      if 'b' not in 'Python':         # 'Python'에 'b'가 들어있나요?
         print('no')
-      if 1 in myList:         # myList에 1이 들어있나요?
+      if 1 in myList:                 # myList에 1이 들어있나요?
         print('yes')
-      if 'python' not in myTuple: # myTuple에 'python'이 들어있나요?
+      if 'python' not in myTuple:     # myTuple에 'python'이 들어있나요?
         print('no')
-      if 'c' in mySet:        # mySet에 'c'가 들어있나요?
+      if 'c' in mySet:                # mySet에 'c'가 들어있나요?
         print('yes')
         ```
 - ### while
@@ -53,4 +53,12 @@
           a += 1
       print(sum)  # 5050
       ```
-  
+    + ##### while문을 이용한 list, tuple, string, dictionary, set 출력 
+      ```python
+      # list
+      i = 0
+      list1 = ['사과', '바나나', '수박', '포도']
+      while i < len(list1):
+          print(i, '번째 요소는', list1[i])
+      i += 1
+        ```
