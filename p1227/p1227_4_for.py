@@ -72,7 +72,15 @@ print(numList)
 numList = [(i * 3) - 1 for i in range(1, 10)]
 print(numList)
 
-starList=['*'*i for i in range(1,10)]
+starList = ['*' * i for i in range(1, 10)]
 print(starList)
 
 # 리스트 다중 for
+numList = [i * j for i in range(2, 11) for j in range(1, 10)]
+print(numList)
+
+numList=[]
+for i in range(2,11):
+    for j in range(1,10):
+        numList.append(i*j)
+print(numList)

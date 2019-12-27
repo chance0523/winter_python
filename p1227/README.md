@@ -91,5 +91,7 @@
        ```
     + ##### list 내부 for
       ```python
-      numList = [i for i in range(1, 11)]
+      numList = [i for i in range(1, 11)] # 1~10까지
+      
+      numList = [i * j for i in range(2, 11) for j in range(1, 10)] # 구구단
       ``` 
