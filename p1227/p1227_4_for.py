@@ -74,3 +74,5 @@ print(numList)
 
 starList=['*'*i for i in range(1,10)]
 print(starList)
+
+# 리스트 다중 for
