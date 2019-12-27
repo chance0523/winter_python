@@ -81,3 +81,5 @@
       print('Hello Python2')
         ``` 
 - ### for
+  - #### for i in range(start, end, step):
+    +
