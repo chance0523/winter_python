@@ -139,3 +139,19 @@ gongback = 0
 while gongback < len(message):
     print(' ' * gongback + message[gongback])
     gongback += 1
+
+# break
+count = 0
+while count < 2:
+    print('Hello Python')
+    count += 1
+    break
+print('Hello Python2')
+
+print('-' * 30)
+count = 0
+while count < 2:
+    print('Hello Python')
+    count += 1
+    continue
+print('Hello Python2')

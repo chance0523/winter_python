@@ -41,7 +41,7 @@
         print('yes')
         ```
 - ### while
-  - #### while
+  - #### while / break / continue
     + ##### 조건이 True일 동안에 반복 수행
     + ##### while
       ```python
@@ -62,3 +62,21 @@
           print(i, '번째 요소는', list1[i])
       i += 1
         ```
+    + ##### break, continue
+      ```python
+      # break는 while문을 빠져나옴
+      count = 0
+      while count < 2:
+          print('Hello Python')
+          count += 1
+          break               # 만나면 while문 빠져나옴
+      print('Hello Python2')
+      
+      # continue는 while문을 빠져나가지 않고 while문의 맨 처음으로 돌아감
+      count = 0
+      while count < 2:
+          print('Hello Python')
+          count += 1
+          continue            # while문의 처음으로 돌아감
+      print('Hello Python2')
+        ``` 
