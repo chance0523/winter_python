@@ -3,4 +3,4 @@
 > #### 연수기간 : 2019.12.24 ~ 2020.02.18 (총 38일)
 
 * ### 2019.12.24 ~ : PYTHON PROGRAMMING
-  - ### [I/O, variable]https://github.com/samuel950523/winter_python/tree/master/p1224
+  - ### [I/O, variable](https://github.com/samuel950523/winter_python/tree/master/p1224)
