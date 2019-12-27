@@ -65,4 +65,10 @@ while i < len(txt1):
     i += 2
 
 # 딕셔너리 구조에서 키와 값을 분리시켜서 출력하기
-
+dict1 = {'a': 'africa', 's': 'say', 'c': 'coffee', 'd': 'drama', 'y': 'yes'}
+key2list = list(dict1.keys())
+val2list = list(dict1.values())
+i = 0
+while i < len(key2list):
+    print(key2list[i], ':', val2list[i])
+    i += 1

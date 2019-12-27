@@ -29,15 +29,15 @@
       ```
     + ##### in, not in을 활용한 if문
       ```python
-      if 'a' in 'banana':
+      if 'a' in 'banana':     # 'banana'에 'a'가 들어있나요?
         print('yes')
-      if 'b' not in 'Python':
+      if 'b' not in 'Python': # 'Python'에 'b'가 들어있나요?
         print('no')
-      if 1 in myList:
+      if 1 in myList:         # myList에 1이 들어있나요?
         print('yes')
-      if 'python' not in myTuple:
+      if 'python' not in myTuple: # myTuple에 'python'이 들어있나요?
         print('no')
-      if 'c' in mySet:
+      if 'c' in mySet:        # mySet에 'c'가 들어있나요?
         print('yes')
         ```
 - ### while
@@ -45,6 +45,7 @@
     + ##### 조건이 True일 동안에 반복 수행
     + ##### while
       ```python
+      # 1 ~ 100 까지의 합
       sum = 0
       a = 1
       while a <= 100:
