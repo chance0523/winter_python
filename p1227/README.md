@@ -81,7 +81,7 @@
       print('Hello Python2')
         ``` 
 - ### for
-  - #### for / list 내부 for
+  - #### for / list 내부 for / for문으로 list 돌기
     + ##### for i in range(start, end, step):
       ```python
       sum = 0
@@ -95,3 +95,9 @@
       
       numList = [i * j for i in range(2, 11) for j in range(1, 10)] # 구구단
       ``` 
+    + ##### for문으로 list돌기
+      ```python
+      myList = [2, 3, 5, 7, 11]
+      for i in myList:
+      print(i, end=' ')
+      ```
