@@ -81,5 +81,15 @@
       print('Hello Python2')
         ``` 
 - ### for
-  - #### for i in range(start, end, step):
-    +
+  - #### for / list 내부 for
+    + ##### for i in range(start, end, step):
+      ```python
+      sum = 0
+      for i in range(1, 101):
+          sum += i
+      print('1~100까지의 합 :', sum)
+       ```
+    + ##### list 내부 for
+      ```python
+      numList = [i for i in range(1, 11)]
+      ``` 

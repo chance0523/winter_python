@@ -43,3 +43,34 @@ for i in range(1, 25):
         continue
     else:
         print(i, end=' ')
+print()
+
+# 다중 for문
+for i in range(0, 3):
+    print('-' * 30)
+    for j in range(0, 3):
+        print('Hello World')
+
+# 다중 for문 이용 구구단
+for i in range(2, 10):
+    for j in range(1, 10):
+        print('%d x %d = %d' % (i, j, (i * j)))
+    print('%d단 끝' % i)
+
+# list for
+# 1~10가지 숫자로 이루어진 리스트 만들기 1
+numList = []
+for i in range(1, 11):
+    numList.append(i)
+print(numList)
+
+# 1~10가지 숫자로 이루어진 리스트 만들기 1
+numList = [i for i in range(1, 11)]
+print(numList)
+
+# 3의 배수에서 -1 한 값으로 리스트를 만들어라
+numList = [(i * 3) - 1 for i in range(1, 10)]
+print(numList)
+
+starList=['*'*i for i in range(1,10)]
+print(starList)
