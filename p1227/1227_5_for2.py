@@ -31,3 +31,23 @@ print(f'average = %.2f, sum = %d, max = %d, min = %d' % (avg, sum, max, min))
 myDict = {1: '일', 100: '백', 50: '오십', 1000: '천'}
 for key in myDict:
     print(key, ':', myDict[key])
+
+# for문과 다중 리스트
+listMulti1 = [[1, 2],
+              ['a', 'b'],
+              ['홍길동', '춘향이']]
+print(listMulti1[0])
+print(listMulti1[0][0])
+print(listMulti1[1][1])
+print('--------')
+for (i, j) in listMulti1:
+    # print('i=',i)
+    # print('j=',j)
+    print('(i,j)=', i, j)
+print('--------')
+
+listMulti2 = [[1, 2, 3],
+              ['a', 'b', 'c'],
+              ['홍길동', '춘향이', '이몽룡']]
+for (i, j, k) in listMulti2:
+    print(i, j, k)

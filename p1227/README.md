@@ -106,4 +106,11 @@
       myText = '가나다라마바사'
       for i in myText:
           print(i, end=' ')
+      
+      # 다중 리스트
+      listMulti2 = [[1, 2, 3],
+              ['a', 'b', 'c'],
+              ['홍길동', '춘향이', '이몽룡']]
+      for (i, j, k) in listMulti2:
+          print(i, j, k)
       ```
