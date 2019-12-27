@@ -76,3 +76,24 @@ print(f'{animalList[result]}띠 입니다!!!')
 if result == 0:
     print("원숭이 띠 입니다!!!")
 # ... #
+
+# 조건문 안에 조건문
+'''
+숫자를 입력받아서
+0, 양수, 음수, 숫자가 아니다
+입력받은 데이터가 숫자이면 데이터형 변경
+그렇지 않으면 메세지 출력
+문자열.isdigit() : 문자열이 숫자(!음수)이면 True
+'''
+inData2 = input('숫자를 입력하세요...')
+if inData2.isdigit():
+    print('숫자이다.')
+    inData2 = int(inData2)
+    if inData2 == 0:
+        print('0입니다.')
+    elif inData2 > 0:
+        print('양수입니다.')
+    else:
+        print('음수입니다.')
+else:
+    print('숫자가 아니다.')

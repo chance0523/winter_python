@@ -1,6 +1,7 @@
 # 12/27 - if, while, for
 - ### if
   - #### if / if ~ else / if ~ elif ~ else
+    + ##### True면 실행, False면 실행 안 함.
     + ##### if
       ```python
       a = 1
@@ -10,7 +11,6 @@
       if a < b:         # True
         print('a < b')
         ``` 
-      ##### True면 실행, False면 실행 안 함.
     + ##### if ~ else
       ```python
       if a > b:
