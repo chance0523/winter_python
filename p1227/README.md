@@ -27,3 +27,9 @@
       else:
         print('a == b')
       ```
+    + ##### in, not in을 활용한 if문
+      ```python
+      
+        ```
+- ### while
+  - #### 
