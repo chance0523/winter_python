@@ -155,3 +155,32 @@ while count < 2:
     count += 1
     continue
 print('Hello Python2')
+
+'''
+while True:
+    ans = input('아무 값이나 입력. 종료시 x ...')
+    if ans == 'x':
+        break
+print('입력 종료')
+'''
+
+# 입력 받은 값을 리스트에 추가한다.
+# q 입력 시 입력문 종료 후 리스트 출력
+# 빈 리스트 생성
+'''
+resultList = []
+while True:
+    item = input('리스트에 추가할 요소를 입력하세요 ... (q : 종료)')
+    resultList.append(item)
+    if item == 'q':
+        break
+print('무한루프 종료')
+print('리스트 출력', resultList)
+'''
+# 1~10까지 숫자중에서 5만 빼고 출력하여라
+j = 0
+while j < 10:
+    j += 1
+    if j == 5:
+        continue
+    print(j)
