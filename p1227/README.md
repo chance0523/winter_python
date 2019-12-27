@@ -3,8 +3,8 @@
   - #### if / if ~ else / if ~ elif ~ else
     + ##### if
       ```python
-      a=1
-      b=10
+      a = 1
+      b = 10
       if a > b:         # False
         print('a > b')
       if a < b:         # True
