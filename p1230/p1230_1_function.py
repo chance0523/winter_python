@@ -38,3 +38,86 @@ def addNum(a, b):
 addNum(1, 2)  # 1+2
 addNum(500, 40000)
 
+
+# 인자 x, 결과값 o
+def classPrint():
+    return 'MySQL, sqLite'
+
+
+# 함수호출
+# classPrint() 만으로는 아무것도 안 뜸
+print(classPrint())
+
+
+def classPrint2():
+    message1 = 'Pytorch'
+    message2 = 'Tensorflow'
+    return message1, message2
+
+
+print(classPrint2())  # tuple print
+
+
+def classPrint3():
+    message1 = 'JAVA'
+    message2 = 'VUE'
+    return message2  # 이것만 return . 마치 break
+    message2 += message1
+    return messag2
+
+
+print(classPrint3())
+
+
+# quiz
+# 2개의 인자를 받아서 사칙연산
+def cal(a, b):
+    print(a, '+', b, '=', a + b)
+    print(a, '-', b, '=', a - b)
+    print(a, '*', b, '=', a * b)
+    print(a, '/', b, '=', a / b)
+
+
+cal(30, 3)
+print('-' * 30)
+
+
+# 인자 o, 결과값 o
+def messagePrint2(m):
+    return 'Happy New Year ' + m + '님'
+
+
+print(messagePrint2('홍길동'))
+
+
+# 숫자를 받아서 1 ~ 숫자까지의 합 구하기
+def sum(n):
+    sum = 0
+    for i in range(1, n + 1):
+        sum += i
+    return sum
+
+
+print(sum(100))
+
+
+def sum2(x, y):
+    sum = 0
+    for i in range(x, y + 1):
+        sum += i
+    return sum
+
+
+print(sum2(30, 100))
+
+
+# quiz
+# n개의 입력을 받아서 리스트에 저장하는 함수 정의
+def savelist(n):
+    myList = []
+    for i in range(1, n + 1):
+        myList.append(input('입력 : '))
+    return myList
+
+
+print(savelist(3))
