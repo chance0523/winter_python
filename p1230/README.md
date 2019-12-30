@@ -1,5 +1,5 @@
-# 12/30 - function
-- ### 단순 인자, 가변 인자
+# 12/30 - function / lambda / local variable, global variable
+- ### function
   - #### 단순 인자 => def function_name ( ... ):
     + ##### 인자 x, return 값 x
       ```python
@@ -50,3 +50,15 @@
         print(kwargs['key1'])    # 'key1'의 값 출력
       printDict(key1 = 'hippo', key2 = 'cat')
       ```
+- ### lambda
+  - #### lambda 매개변수 ... : 표현식
+    + ##### 함수를 간결하게 한 줄로 만들 때 사용
+      ```python
+      f = lambda x, y: print(x + y)
+      f(5, 10)
+      ```
+- ### (local / global) variable
+  - #### local variable
+    + ##### local variable
+    
+    + ##### global variable
