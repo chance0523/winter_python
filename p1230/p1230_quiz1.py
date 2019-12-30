@@ -20,7 +20,16 @@ starPrint(3)
 ***
 '''
 
+print('---quiz1---')
 
+
+def starPrint(n):
+    for i in range(n + 1):
+        print('*' * i)
+
+
+starPrint(5)
+starPrint(3)
 
 # 퀴즈 2
 # 인자값을 받아서 출력하는 구구단 함수를 정의한 후
@@ -44,6 +53,15 @@ gugu(9)
 
 '''
 
+print('---quiz2---')
+
+
+def gugu(n):
+    for i in range(1, 10):
+        print(n, 'x', i, '=', n * i)
+
+
+gugu(9)
 
 # 퀴즈 3:
 # 리스트를 호출하면 각각의
@@ -61,7 +79,17 @@ gugu(9)
 2  :  탕수육
 3  :  육계장
 '''
+print('---quiz3---')
 
+
+def printList(menuList):
+    print('\t오늘의 메뉴')
+    for i in range(len(menuList)):
+        print(f'{i + 1} : {menuList[i]}')
+
+
+printList(['라면', '빙수'])
+printList(['모밀', '탕수육', '육계장'])
 
 # 퀴즈 4
 # 키와 몸무게를 인자로 입력하여
@@ -91,7 +119,7 @@ gugu(9)
 BMI : 23.53
 
 '''
-
+print('---quiz4---')
 
 # 퀴즈 5
 # 아래와 함수를 호출하여 메세지가 출력되도록
@@ -118,8 +146,21 @@ say_myself('백설공주', 15, False)
 여자입니다.
 
 '''
+print('---quiz5---')
 
 
+def say_myself(name, old, man=True):
+    print(f'나의 이름은 {name}입니다.')
+    print('나이는 %d살입니다.' % old)
+    if man:
+        print('남자입니다.')
+    else:
+        print('여자입니다.')
+
+
+say_myself('김철수', 20)
+print('-' * 20)
+say_myself('백설공주', 15, False)
 
 # 퀴즈 6
 # 여러가지 값이 리스트에 저장될 수 있게
@@ -147,7 +188,20 @@ addList('가','나','다','라','마')
 
 
 '''
+print('---quiz6---')
 
+
+def addList(*args):
+    myList = list(args)
+    print('총 갯수 :', len(myList))
+    print('데이터형  :', type(myList))
+    for i in range(len(myList)):
+        print(i, '번째 =>', myList[i])
+
+
+addList(1, 2, 3, 4)
+print('-' * 20)
+addList('가', '나', '다', '라', '마')
 
 # 퀴즈 7
 # 첫번째 인자의 값이 'min'이면 다음 인자의 숫자 중
@@ -169,8 +223,28 @@ min_max_number('max', 100, 20, 40, 500, 1)
 최대값은?  500
 
 '''
+print('---quiz7---')
 
 
+def min_max_number(a, *args):
+    if a == 'min':
+        min = args[0]
+        for i in range(1, len(args)):
+            if min > args[i]:
+                min = args[i]
+        print('최소값은?', min)
+    elif a == 'max':
+        max = args[0]
+        for i in range(1, len(args)):
+            if max < args[i]:
+                max = args[i]
+        print('최대값은?', max)
+
+
+min_max_number('min', 100, 20, 40)
+min_max_number('min', 100, 20, 40, 500, 1)
+min_max_number('max', 100, 20, 40)
+min_max_number('max', 100, 20, 40, 500, 1)
 
 # 퀴즈 8
 # **kwargs 인자 가변 함수를 이용하여
@@ -197,8 +271,19 @@ d : dress
 q : quit
 
 '''
+print('---quiz8---')
 
 
+def dictDefine(**kwargs):
+    print(kwargs)
+    kl = list(kwargs.keys())
+    vl = list(kwargs.values())
+    for i in range(len(kwargs)):
+        print(f'{kl[i]} = {vl[i]}')
+
+
+dictDefine(a='apple', b='banana', n='nano')
+dictDefine(b='banana', n='nano', s='soup', d='dress', q='quit')
 
 # 퀴즈 9
 # 첫글자를 제외한 나머지 글자를 '*'로 표시하는
@@ -214,6 +299,10 @@ q : quit
 홍**
 김**
 '''
+print('---quiz9---')
+f1 = lambda s: print(s[0] + '*' * 2)
+f1('홍길동')
+f1('김철수')
 
 # 퀴즈 10
 # 국어,영어,수학 3개의 합과 평균을 구하는
@@ -227,3 +316,6 @@ q : quit
 
 '''
 
+print('---quiz10---')
+f2 = lambda a, b, c: print(f'국어:{a},영어:{b},수학:{c},총점:{a + b + c},평균:{(a + b + c) / 3}')
+f2(100, 80, 90)
