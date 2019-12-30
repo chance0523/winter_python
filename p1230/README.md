@@ -92,4 +92,37 @@
       ```
 - ### 외장 함수
   - #### import 사용
-    + ##### 
+    + ##### datetime
+      ```python
+      import datetime
+      
+      now = datetime.datetime.now()
+      print(f'오늘은 {now.year}년 {now.month}월 {now.day}일 입니다.')
+      print(f'현재시간은 {now.hour}시 {now.minute}분입니다.')
+      print(f'현재시간은 {now.hour - 12}시 {now.minute}분입니다.')
+      
+      today = datetime.datetime.today().weekday()
+      if today == 0:
+        print('월요일입니다')    # 0번이 월요일
+      ```
+- ### 외장 함수
+  - #### 수학 관련
+    + ##### abs, max, min
+    ```python
+    num = -10
+    print(f'{num}의 절대값은 {abs(num)}')
+    numList = [100, 45, 20, 40, 500]
+    print(f'{numList}의 최대값은 {max(numList)}')
+    print(f'{numList}의 최소값은 {min(numList)}')
+    ```
+    + ##### divmod(n1, n2)
+    ```python
+    print(f'55/2의 몫 = {divmod(55, 2)[0]}')
+    print(f'55/2의 나머지 = {divmod(55, 2)[1]}')
+    ```
+    + ##### eval(문자열계산식)
+    ```python
+    result = input('수식을 입력하세요 ... ')
+    print(result, ' = ', eval(result))      # 3+4 = 7
+    ```
+    
