@@ -110,14 +110,33 @@ def sum2(x, y):
 
 print(sum2(30, 100))
 
-
 # quiz
 # n개의 입력을 받아서 리스트에 저장하는 함수 정의
+'''
 def savelist(n):
     myList = []
-    for i in range(1, n + 1):
+    for i in range(n):
         myList.append(input('입력 : '))
     return myList
 
 
 print(savelist(3))
+'''
+
+
+# 인자 o, return 값 다중
+def mulitReturn(n, m):
+    return n + m, n - m
+
+
+print(mulitReturn(2, 3))  # tuple
+
+
+# 인자의 초기값 설정
+def sum3(n=0, m=0):
+    return n + m
+
+
+print(f'sum3() = {sum3()}')
+print(f'sum3(10) = {sum3(10)}')
+print(f'sum3(2, 3) = {sum3(2, 3)}')
