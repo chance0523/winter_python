@@ -1,5 +1,5 @@
 # 12/30 - function / lambda / (local, global) variable
-- ### function 
+- ### 사용자 정의 함수
   - #### 단순 인자 => def function_name ( ... ):
     + ##### 인자 x, return 값 x
       ```python
@@ -71,7 +71,7 @@
       scopeTest()                 # 함수 안의 v = 100
       print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
       ```
-  - ##### global variable
+  - #### global variable
     + ##### 함수 밖에서도 효용
       ```python
       v = 10      # global variable
@@ -90,3 +90,6 @@
       print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
       print(f'함수 밖의 w = {w}')  # 함수 밖의 w = 300
       ```
+- ### 외장 함수
+  - #### import 사용
+    + ##### 
