@@ -17,3 +17,14 @@ print('초 :', now.second)
 print(f'오늘은 {now.year}년 {now.month}월 {now.day}일 입니다.')
 print(f'현재시간은 {now.hour}시 {now.minute}분입니다.')
 print(f'현재시간은 {now.hour - 12}시 {now.minute}분입니다.')
+
+if now.hour < 12:
+    print(f'현재 시간은 오전 {now.hour}시입니다!')
+else:
+    print(f'현재 시간은 오후 {now.hour - 12}시입니다.')
+
+# 요일찍기
+today = datetime.datetime.today().weekday()
+print(today, type(today))
+if today == 0:
+    print('월요일입니다')  # 0번이 월요일
