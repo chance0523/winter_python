@@ -1,4 +1,4 @@
-# 12/30 - function / lambda / local variable, global variable
+# 12/30 - function / lambda / (local, global) variable
 - ### function
   - #### 단순 인자 => def function_name ( ... ):
     + ##### 인자 x, return 값 x
@@ -59,6 +59,34 @@
       ```
 - ### (local / global) variable
   - #### local variable
-    + ##### local variable
+    + ##### 함수 안에서만 효용
+      ```python
+      v = 10          # 전역변수 (global variable)
+      
+      def scopeTest():
+        v = 100       # 지역변수 (local variable)
+      
+      print(f'함수 안의 v = {v}')
+      print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
+      scopeTest()                 # 함수 안의 v = 100
+      print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
+      ```
+  - ##### global variable
+    + ##### 함수 밖에서도 효용
+      ```python
+      v = 10      # global variable
+      w = 20      # global variable
+      
+      def scopeTest():
+        v = 100
+        global w       # global variable로 선언
+        w = 300
+        print(f'함수 안의 v = {v}')
+        print(f'함수 안의 w = {w}')
     
-    + ##### global variable
+      print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
+      print(f'함수 밖의 w = {w}')  # 함수 밖의 w = 20
+      scopeTest()                 # 함수 안의 v = 100, w = 300
+      print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
+      print(f'함수 밖의 w = {w}')  # 함수 밖의 w = 300
+      ```

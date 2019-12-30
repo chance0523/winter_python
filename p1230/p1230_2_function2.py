@@ -128,13 +128,9 @@ f2(5, 10)
 # 지역변수
 
 v = 10  # 전역변수
-
-
 def scopeTest():
     v = 100  # 지역변수
     print(f'함수 안의 v = {v}')
-
-
 print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
 scopeTest()  # 함수 안의 v = 100
 print(f'함수 밖의 v = {v}')  # 함수 밖의 v = 10
