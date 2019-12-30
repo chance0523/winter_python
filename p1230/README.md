@@ -1,5 +1,5 @@
 # 12/30 - function / lambda / (local, global) variable
-- ### function
+- ### function 
   - #### 단순 인자 => def function_name ( ... ):
     + ##### 인자 x, return 값 x
       ```python
