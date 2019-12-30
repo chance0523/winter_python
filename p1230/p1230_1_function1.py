@@ -140,3 +140,15 @@ def sum3(n=0, m=0):
 print(f'sum3() = {sum3()}')
 print(f'sum3(10) = {sum3(10)}')
 print(f'sum3(2, 3) = {sum3(2, 3)}')
+
+
+# 두 수의 곱을 리턴한다.
+def mul(n, m=1):
+    return print(n * m)
+
+
+# mul() ERROR
+mul(7)
+mul(7, 8)
+
+# 마지막 인자에는 초기값이 있어야한다.

@@ -1,6 +1,6 @@
 # 12/30 - function
-- ### 사용자 정의 함수
-  - #### def function_name ( ... ):
+- ### 단순 인자, 가변 인자
+  - #### 단순 인자 => def function_name ( ... ):
     + ##### 인자 x, return 값 x
       ```python
       def helloWorld():
@@ -33,4 +33,20 @@
       def multiReturn(n, m):
         return n + m, n - m
       print(multiReturn(2, 3)) # tuple로 return
+      ```
+  - #### 가변 인자 => def function_name (*args):
+    + ##### *args
+      ```python
+      def studentName(*args):
+        print(args)
+      studentName('Jake')
+      studentName('Jake','Amy')
+      studentName('Jake','Amy','Tilda')
+      ```
+    + ##### *kwargs
+      ```python
+      def printDict(**kwargs):
+        print(kwargs)            # dictionary 출력
+        print(kwargs['key1'])    # 'key1'의 값 출력
+      printDict(key1 = 'hippo', key2 = 'cat')
       ```
