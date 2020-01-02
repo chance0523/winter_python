@@ -10,7 +10,6 @@ print('제곱값으로 구성된 리스트 출력(일반 함수)')
 
 print('제곱값으로 구성된 리스트 출력(map() 함수)')
 
-
 print('제곱값으로 구성된 리스트 출력(map(), lambda함수)')
 # map 객체 출력
 
@@ -18,13 +17,11 @@ print('\n퀴즈:두 리스트에서 인덱스가 같은 값을 서로 곱한 후
 
 print('인덱스가 같은 두 수 곱하기 (일반 함수)')
 
-
 print('인덱스가 같은 두 수 곱하기 (map 함수)')
 
 print('인덱스가 같은 두 수 곱하기 (map(), lambda 함수)')
 
-print('\n'*2, '-'*30)
-
+print('\n' * 2, '-' * 30)
 
 # reduce()
 # 외장함수로 import functools 모듈 임포트 명령 필요
@@ -35,8 +32,4 @@ print('\n일반함수 이용 ')
 
 print('\nreduce() 이용 ')
 
-
 print('\nreduce(), lambda 이용')
-
-
-
