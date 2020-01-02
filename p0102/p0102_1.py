@@ -120,3 +120,38 @@ print(myList2, type(myList2))
 x, y = zip(*myList2)
 print(x)
 print(y)
+
+# filter(), map(), reduce()
+# 정의된 사용자 정의함수, 람다함수를 리스트 데이터 각각에 저장한다.
+
+print('퀴즈 : 리스트 중 짝수만 출력하기')
+
+
+def oddPrint(list):
+    resultList = []
+    for i in list:
+        if i % 2 == 0:
+            resultList.append(i)
+    return resultList
+
+
+print(f'짝수만 출력(일반함수) : {oddPrint([10, 30, 5, 9, 18])}')
+print('짝수만 출력(filter() 함수)')
+
+
+def oddPrint2(n):
+    if n % 2 == 0:
+        return True
+
+
+print(oddPrint2(10))
+print(filter(oddPrint2, [10, 30, 5, 9, 18]))
+for i in filter(oddPrint2, [10, 30, 5, 9, 18]):
+    print(i)
+print(list(filter(oddPrint2, [10, 30, 5, 9, 18])))
+
+print('짝수만 출력(filter()와 lambda 함수)')
+print(filter(lambda x: x % 2 == 0, [10, 30, 5, 9, 18]))
+print(list(filter(lambda x: x % 2 == 0, [10, 30, 5, 9, 18])))
+for i in filter(lambda x: x % 2 == 0, [10, 30, 5, 9, 18]):
+    print(i)
