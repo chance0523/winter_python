@@ -18,22 +18,13 @@
 # 파일변수 = open('파일경로', 'r')
 # 파일전체 문자열데이터로 리턴
 # 문자열변수 = 파일변수.read()
-f = open('data/Yesterday.txt', 'r')
-print(f)
-data = f.read()
-print(data, '\n\n', type(data))
 
-# f.close()
 
 # 문서는 몇개의 단어로 구성되어 있을까?
 # 단어별로 구성해서 리스트 구조로 변경
 # 문자열변수.split() => 공백기준으로 리스트로 변경
-dataList = data.split()
-# 3개만 출력
-print(type(dataList))
-print(dataList[:3])
-print('단어 수? => ', len(dataList))
-f.close()
+
+
 
 # 퀴즈
 # 파일의 단어전체수와 3개의 단어가
@@ -43,10 +34,10 @@ f.close()
 printWord('data/sample.txt')
 printWord('data/Yesterday.txt')
 
->> 결과값
+>> 결과값 
 파일명 : data/sample.txt
 단어 갯수 : 134
-단어 3개 출력
+단어 3개 출력 
 ['Yesterday', 'All', 'my']
 '''
 
@@ -70,27 +61,23 @@ fileread('data/sample.txt')
 
 print('퀴즈 : 파일읽은 후 출력하기 ')
 
+
 # ----------------
 # 파일 읽기 2 - 첫줄만 readline()
 # 파일변수 = open('파일경로', 'r')
 # 첫번째 줄만 출력하기 -> 문자열
 # 문자열변수 = 파일변수.readline()
-f = open('data/sample.txt', 'r')
-data2 = f.readline()
-print('\n\n첫 줄만 출력 : \n\n', data2)
-f.close()
+
+
+
 
 # ----------------
 # 파일 읽기 3 - readlines()
 # 파일변수 = open('파일경로', 'r')
 # 한줄씩 읽어서 리스트 요소로 저장
 # 리스트이름 = 파일변수.readlines()
-f = open('data/sample.txt', 'r')
-data3 = f.readlines()
-print('\n\n전체 출력 : \n\n', data3)
-# for i in data3[0:]:
-#     print(i,end='')
-f.close()
+
+
 
 # # 퀴즈
 # '''
@@ -110,7 +97,8 @@ lineRead('data/Yesterday.txt')
 행 수 :  30
 
 '''
-print('\n\n 퀴즈 : 파일의 행수는 몇개일까요?')
+print( '\n\n 퀴즈 : 파일의 행수는 몇개일까요?')
+
 
 #
 # 퀴즈
@@ -142,8 +130,14 @@ sumAvr('data/data_kor.txt')
 # 문자열변수.replace('\n','')
 # 문자열변수.replace(' ,'')
 
-print('-' * 10, '\n\n')
+print('-'*10, '\n\n')
 # 공백과 개행 그대로 파일읽은 후 글자수 출력하기
 
 
 # 공백과 개행 삭제한 후 글자수 출력하기
+
+
+
+
+
+

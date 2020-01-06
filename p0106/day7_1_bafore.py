@@ -6,6 +6,8 @@
 # print(mylist[3])
 
 # ZeroDivisionError : 0으로 나눈 경우
+# print(23/0)
+
 # FileNotFoundError : 잘못된 파일 경로
 # SyntaxError 제외 => 예외처리 try: ~ Except 구문에서 제외
 
