@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/student/Desktop/seo/pycharm/p0107/data/test.db" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3642"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="albums"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM customers;
+SELECT * FROM playlists WHERE PlaylistId &gt; 5;
+SELECT * FROM albums WHERE AlbumId &gt; 5 AND ArtistId &lt; 12 LIMIT 6;
+
+SELECT * FROM employees;
+SELECT * FROM employees WHERE NOT Title = 'IT Staff';
+
+SELECT * FROM employees ORDER BY LastName, FirstName ASC LIMIT 5;
+-- ASC : 오름차순 / DESC : 내림차순
+
+-- 예) albums 테이블에서 Title 컬럼값을 기준으로 정렬하기
+SELECT * FROM albums ORDER by Title ASC limit 5;
+-- 예) albums 테이블에서 title 컬럼값을 기준으로 역정렬하기
+SELECT * FROM albums ORDER by Title DESC limit 5;
+-- 예) playlists 테이블에서 name 컬럼값을 기준으로 정렬하기
+-- name 컬럼값이 같은 경우에 정렬 기준은 PlaylistId
+SELECT * FROM playlists ORDER by name, PlaylistId;
+-- 예) customers 테이블에서 Country 필드값이 USA인 레코드를
+-- CustomerId 컬럼값을 기준으로 정렬하기
+SELECT * FROM customers where Country = 'USA' ORDER by CustomerId;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7adb5c51-0bb0-4300-8bf9-3d2109300dbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sqlite.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\student\Desktop\seo\pycharm\p0107" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.p0107_2">
     <configuration name="p0107_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
