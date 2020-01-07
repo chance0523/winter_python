@@ -32,11 +32,43 @@ conn.close()
 conn = sqlite3.connect('data/test.db')
 cursor = conn.cursor()
 cursor.execute('SELECT firstname, lastname, city, country FROM customers;')
-resultList=cursor.fetchone()
+resultList = cursor.fetchone()
 print(resultList)
 
 cursor.execute('SELECT * FROM playlists WHERE name = "Music";')
-resultList=cursor.fetchall()
+resultList = cursor.fetchall()
 print(resultList)
+
+conn.close()
+
+# DB 파일이 없는 경우에는 새로 생성
+conn = sqlite3.connect('data/book.db')
+cursor = conn.cursor()
+
+# 테이블 명 : book1
+# id => int, 기본키, 필수항목(NOT NULL), AUTOINCREMENT
+# title => text, NN
+# writer => text, NN
+# page => int, NN
+# price => int, NN
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS "book1"(
+        "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        "title" TEXT NOT NULL,
+        "writer" TEXT NOT NULL,
+        "page" INTEGER NOT NULL,
+        "price" INTEGER NOT NULL
+    );
+''')
+
+# 실제 db에 반영
+conn.commit()
+
+cursor.execute('''
+    INSERT INTO book1 (title, writer, page, price)
+    VALUES ("Jump to Python", "E.Y.Park", 240, 9000);
+''')
+
+conn.commit()
 
 conn.close()
