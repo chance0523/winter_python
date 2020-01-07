@@ -1,0 +1,11 @@
+// sqlite
+- 소규모 프로젝트 적합
+- python에 내장모듈로 연동 가능
+- 별도의 설치프로그램이 필요없다.
+
+sqlitebrowser
+ : sqlite db의 CRUD 관리프로그램
+ : GUI 제공
+관련 프로그램 >>
+https://sqlitebrowser.org/dl
+
