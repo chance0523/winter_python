@@ -130,3 +130,10 @@ SELECT * FROM playlists
             ORDER BY 컬럼명1, 컬럼명2 ASC/DESC;
 
 
+-- 테이블 만들기
+   테이블 구조 => 스키마
+   필드명과 자료형 지정
+   NOT NULL(필수항목)
+   PRIMARY KEY(기준키)
+   AUTOINCREMENT (자동 숫자 증가)
+   
