@@ -79,3 +79,43 @@ for row in list_pop[:12]:
     csvline.writerow(row)
 print('population_11.csv 파일쓰기가 완료되었습니다.')
 f.close()
+
+# 'data/population.csv' 파일에서 11개의 데이터행을 추출해서
+# 주(State)가 'S'로 시작하는 행만 추가
+# 'data/population_11.csv' 파일에 추가하기
+
+with open('data/population.csv', 'r') as f:
+    csv_data = csv.reader(f)
+    # for row in csv_data:
+    #     print(row)
+    # 리스트 안에 리스트 구조로 저장하기
+    list_pop = []
+    for row in csv_data:
+        if row[0][0] == 'S':
+            list_pop.append(row)
+    print(list_pop)
+
+f = open('data/population_11.csv', 'a', newline='')
+csvline = csv.writer(f)
+for row in list_pop[1:]:
+    csvline.writerow(row)
+print('population_11.csv 추가가 완료되었습니다.')
+f.close()
+
+with open('data/population.csv', 'r') as f:
+    csv_data = csv.reader(f)
+    # for row in csv_data:
+    #     print(row)
+    # 리스트 안에 리스트 구조로 저장하기
+    list_pop = []
+    for row in csv_data:
+        if (row[0][0] == 'M') or (row[0][0] == 'W'):
+            list_pop.append(row)
+    print(list_pop)
+
+f = open('data/population_11.csv', 'a', newline='')
+csvline = csv.writer(f)
+for row in list_pop:
+    csvline.writerow(row)
+print('population_11.csv 추가가 완료되었습니다.')
+f.close()
