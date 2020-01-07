@@ -67,7 +67,15 @@ with open('data/population.csv', 'r') as f:
     # for row in csv_data:
     #     print(row)
     # 리스트 안에 리스트 구조로 저장하기
-    list_pop =[]
+    list_pop = []
     for row in csv_data:
         list_pop.append(row)
     print(list_pop)
+
+# 11개를 새로운 파일에 쓰기
+f = open('data/population_11.csv', 'w', newline='')
+csvline = csv.writer(f)
+for row in list_pop[:12]:
+    csvline.writerow(row)
+print('population_11.csv 파일쓰기가 완료되었습니다.')
+f.close()
