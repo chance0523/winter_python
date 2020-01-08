@@ -7,12 +7,12 @@ conn = sqlite3.connect('data/book2.db')
 cursor = conn.cursor()
 # 테이블 생성
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS "book2" (
-	    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-	    "title" TEXT NOT NULL,
-	    "writer" TEXT NOT NULL,
-	    "page" INTEGER NOT NULL,
-	    "price"	INTEGER NOT NULL
+    CREATE TABLE IF NOT EXISTS "book2"(
+        "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        "title" TEXT NOT NULL,
+        "writer" TEXT NOT NULL,
+        "page" INTEGER NOT NULL,
+        "price"	INTEGER NOT NULL
     );
 ''')
 
