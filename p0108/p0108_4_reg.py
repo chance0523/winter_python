@@ -176,7 +176,24 @@ print(re.findall('01[0|1|6|7]-[0-9]{4}-[0-9]{4}', txt2))  # 숫자 3자리(010/0
 
 # quiz
 # 주민등록번호 유효성 검사
-userID = input('주민 등록 번호를 입력해주세요. (예 : 000000-0000000) ')
-idPattern = '[0-9]{6}-[1|2|3|4][0-9]{6}'
-print(re.search(idPattern, userID))
-print(re.search(idPattern, userID).group())
+# userID = input('주민 등록 번호를 입력해주세요. (예 : 000000-0000000) ')
+# juminPattern = '[0-9]{6}-[1|2|3|4][0-9]{6}'
+# print(re.search(juminPattern, userID))
+# print(re.search(juminPattern, userID).group())
+
+# 그루핑 이용
+# 정규표현식의 패턴을 그룹화 : group(index)
+juminPattern = '([0-9]{6})-([1|2|3|4][0-9]{6})'
+result = re.match(juminPattern, '123456-1234567')
+print(result)  # <re.Match object; span=(0, 14), match='123456-1234567'>
+print(result.group())  # 123456-1234567
+print(result.group(1))  # 123456
+print(result.group(2))  # 1234567
+
+# quiz
+# 주민번호 데이터에서 뒷자리는 '*******' 로 변경
+quizList = ['940516-1465284', '840516-2158468', '510514-1054786', '540718-1047894']
+juminPattern = '([0-9]{6})-([1|2|3|4][0-9]{6})'
+for i in quizList:
+    result = re.match(juminPattern, i)
+    print(f'{result.group(1)}-{"*******"}')
