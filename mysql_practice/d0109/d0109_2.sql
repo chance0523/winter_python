@@ -96,3 +96,47 @@ SELECT * FROM buyTbl2;
 INSERT INTO buyTbl2 (userId, prodName, groupName, price, amount)
             (SELECT userId, prodName, groupName, price, amount FROM buyTbl WHERE groupName = '전자');
 
+-- 레코드 수정
+-- buyTbl2의 num이 1인 레코드에서 prodName 값을 데스크탑으로 변경하여라
+UPDATE buyTbl2 SET prodName = '데스크탑' WHERE num = '1';
+
+-- 레코드 삭제
+-- DELETE FROM 테이블명 WHERE 절;
+-- => 조건에 해당되는 레코드 삭제
+-- DELETE FROM 테이블명;
+-- => WHERE 절이 없으면 레코드 모두 삭제
+CREATE TABLE userTbl_a (SELECT * FROM userTbl);
+CREATE TABLE userTbl_b (SELECT * FROM userTbl);
+CREATE TABLE userTbl_c (SELECT * FROM userTbl);
+
+-- userTbl_a에서 height이 170이상인 레코드 삭제
+DELETE FROM userTbl_a WHERE height>=170;
+SELECT * FROM userTbl_a;
+
+DELETE FROM userTbl_b;
+SELECT * FROM userTbl_b;
+
+-- 테이블 삭제
+-- DROP TABLE 테이블명
+DROP TABLE userTbl_b;
+SHOW TABLES; -- 사라짐
+
+-- 테이블 구조는 제외 레코드만 모두 삭제
+-- TRUNCATE TABLE 테이블명
+TRUNCATE TABLE userTbl_c;
+SHOW TABLES; -- 테이블은 있음
+SELECT * FROM userTbl_c; -- 레코드가 없음
+
+-- 데이터베이스 삭제
+-- DROP DATABASE 데이터베이스명;
+-- DROP DATABASE IF EXISTS 데이터베이스명;
+-- 데이터베이스 생성 => sqldb2
+-- sqldb2 데이터베이스 userTbl1 <= sqldb 데이터베이스의 userTbl 테이블 복사
+CREATE DATABASE sqldb2;
+SHOW DATABASES;
+use sqldb2;
+CREATE TABLE usertbl1 (SELECT * FROM sqldb.userTbl);
+SHOW TABLES;
+
+DROP DATABASE sqldb2;
+SHOW DATABASES;
