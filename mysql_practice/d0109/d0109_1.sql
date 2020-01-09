@@ -126,3 +126,55 @@ SELECT * FROM userTbl WHERE name LIKE '_종신'; -- 윤종신
 
 -- userTbl에서 addr 지역명이 '경'으로 시작하거나 '남'으로 끝나는 레코드 출력
 SELECT * FROM userTbl WHERE addr LIKE '경%' OR '%남';
+
+/* ---------------------------------- */
+-- 서브쿼리 (Sub Query)
+-- 쿼리문 안에 쿼리문이 들어가는 것
+-- SELECT .. FROM .. WHERE 조건절1 (SELECT .. FROM .. WHERE 조건절2)
+-- 주의 사앟 : 서브쿼리의 레코드 결과값은 1개로 유일해야한다.
+
+-- userTbl 테이블에서 height  컬럼값이 177 이상인 레코드
+SELECT * FROM userTbl WHERE height > 177;
+
+-- 177을 또다른 쿼리문으로 대치
+-- 김경호의 키를 모른다는 가정
+-- 주의사항 : 서브쿼리의 경우 레코드가 하나만 추출되어야 한다.
+SELECT height FROM userTbl WHERE name = '김경호';
+
+-- 김경호보다 키가 큰 사람의 이름과 키를 출력하여라
+SELECT name, height FROM userTbl WHERE height > (SELECT height FROM userTbl WHERE name = '김경호');
+
+-- 서브쿼리의 레코드가 다중인 경우 : ANY (서브쿼리문)
+-- 지역이 경남인 사람의 키보다 크거나 같은 사람의 이름과 키를 출력하여라
+SELECT height FROM userTbl WHERE addr = '경남';
+SELECT name, height FROM userTbl WHERE height >= ANY (SELECT height FROM userTbl WHERE addr = '경남');
+
+-- 정렬 ORDER BY 컬럼명 ASC/DESC
+SELECT * FROM userTbl ORDER BY birthYear;
+SELECT * FROM userTbl ORDER BY birthYear DESC;
+
+-- addr을 기준, 두번째 조건을 name으로
+SELECT * FROM userTbl ORDER BY addr;
+SELECT * FROM userTbl ORDER BY addr, name;
+
+-- 레코드 값의 중복 제거
+-- addr 컬럼값의 구성 표시 (중복값없이)
+SELECT addr FROM userTbl;
+SELECT DISTINCT addr FROM userTbl;
+
+/* ----------------------------------- */
+-- 기존 테이블의 특정 컬럼을 복사해서 새로운 테이블 만들기
+-- CREATE TABLE 새로운 테이블명 (SELECT 복사할 열 FROM 기존테이블)
+-- buyTbl에서 전체 복사 => buyTbl_a
+CREATE TABLE buyTbl_a (SELECT * FROM buyTbl);
+SHOW TABLES;
+SELECT * FROM buyTbl_a;
+-- buyTbl에서 일부 열만 복사 => buyTbl_b
+CREATE TABLE buyTbl_b (SELECT userID, prodName FROM buyTbl);
+SHOW TABLES;
+SELECT * FROM buyTbl_b;
+
+-- userTbl에서 addr이 '서울' => userTbl_seoul
+CREATE TABLE userTbl_seoul (SELECT * FROM userTbl WHERE addr = '서울');
+SHOW TABLES;
+SELECT * FROM userTbl_seoul;
