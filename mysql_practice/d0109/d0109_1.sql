@@ -124,3 +124,5 @@ SELECT COUNT(*) FROM userTbl WHERE name LIKE '김__'; -- 2
 SELECT COUNT(*) FROM userTbl WHERE name LIKE '김_'; -- 0   _ 의 갯수에 따라 달라짐
 SELECT * FROM userTbl WHERE name LIKE '_종신'; -- 윤종신
 
+-- userTbl에서 addr 지역명이 '경'으로 시작하거나 '남'으로 끝나는 레코드 출력
+SELECT * FROM userTbl WHERE addr LIKE '경%' OR '%남';
