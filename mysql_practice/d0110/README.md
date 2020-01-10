@@ -1,4 +1,4 @@
-# 1/10 - variable / control flow function
+# 1/10 - variable / built-in functions
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
@@ -79,8 +79,85 @@
        SELECT FORMAT(@myNumber, 1); -- 123.6
        SELECT FORMAT(@myNumber, 4); -- 123.5679
        ```
-    
+   - #### INSERT / REPLACE
+     + ##### INSERT(문자열, 시작위치, 길이, 교체문자열) : 특정 글자로 교체
+       ```MYSQL
+       SET @userPhone = "010-5555-6606";
+       SELECT INSERT(@userPhone, 5, 4, "####"); -- 010-####-6606
+       SELECT INSERT(@userPhone, 10, 4, "####"); -- 010-5555-####
+       SELECT INSERT(INSERT(@userPhone, 10, 4, '####'), 5, 4, "####"); -- 010-####-####
+       ``` 
+     + ##### REPLACE(문자열, 원래문자열, 교체문자열) : 특정 글자로 교체
+       ```MYSQL
+       SELECT REPLACE(@userPhone, "5555", "####"); -- 010-####-6606
+       ```
+   - #### LEFT / RIGHT / SUBSTRING
+     + ##### LEFT(문자열, 길이) / RIGHT(문자열, 길이) : 왼쪽이나 오른쪽을 기준으로 길이만큼 잘라서 표시 
+       ```MYSQL
+       SELECT @userPhone, LEFT(@userPhone, 3);  -- 010-5555-6606	010
+       SELECT @userPhone, RIGHT(@userPhone, 3); -- 010-5555-6606	606
+       ```
+     + ##### SUBSTRING(문자열, 시작위치, 길이) : 시작위치에서 길이만큼 잘라서 표시  
+       ```MYSQL
+       SELECT SUBSTRING(@userPhone, 5, 9); -- 5555-6606
+       ```
+   - #### REPEAT / LPAD / RPAD
+     + ##### REPEAT(문자열, 반복횟수) : 문자열을 횟수만큼 반복한다.
+       ```MYSQL
+       SET @userName = "신짱구";
+       SELECT REPEAT(@userName, 3); -- 신짱구신짱구신짱구
+       ```
+     + ##### LPAD(문자열, 길이, 채울 문자열), RPAD(문자열, 길이, 채울문자열) : 왼쪽이나 오른쪽에 길이만큼 늘려 문자열을 채운다.
+       ```MYSQL
+       SELECT LPAD(@userName, 10, " * "), RPAD(@userName, 20, " * ");
+       --  *  *  신짱구	|신짱구 *  *  *  *  *  *
+       ```
+   - #### LTRIM / RTRIM / TRIM
+     + ##### LTRIM(문자열), RTRIM(문자열), TRIM(문자열) : 문자열 공백 없애기
+       ```MYSQL
+       SET @userM = "       근 하 신 년       ";
+       SELECT CONCAT('###',LTRIM(@userM), '###'); -- ###근 하 신 년       ###
+       SELECT CONCAT('###',RTRIM(@userM), '###'); -- ###       근 하 신 년###
+       SELECT CONCAT('###',TRIM(@userM), '###');  -- ###근 하 신 년###
+       ```
+       
 - ### 날짜 및 시간 함수 (date and time function)
+   - #### variable type : YEAR / DATE / TIME / DATETIME
+     + ##### 
+       ```mysql
+       SELECT CAST('2019-12-25 12:12:12' AS DATETIME); -- 2019-12-25 12:12:12
+       SELECT CAST('2020-12-12 12:12:12' AS DATE) AS DATE; -- 2020-12-12
+       SELECT CAST('2019-12-25 12:12:12' AS TIME) AS TIME; -- 12:12:12
+       ```
+   - #### NOW / SYSDATE / CURDATE / CURTIME
+     + ##### NOW() / SYSDATE() : 현재의 날짜와 시간 표시
+       ```MYSQL
+       SELECT 
+           NOW(),
+           CAST(NOW() AS DATE) AS '현재 날짜',
+           CAST(NOW() AS TIME) AS '현재 시각';
+       -- 2020-01-10 12:30:25	2020-01-10	12:30:25
+       ```
+     + ##### CURDATE() : 현재 날짜 표시 / CURTIME() : 현재 시각 표시
+       ```MYSQL
+       SELECT 
+           SYSDATE(),
+           CURDATE() AS '현재 날짜',
+           CURTIME() AS '현재 시각';
+       -- 2020-01-10 12:31:10	2020-01-10	12:31:10
+       ```
+   - #### YEAR / MONTH / DAY / HOUR / MINUTE / SECOND
+     + #####
+       ```MYSQL
+       SELECT 
+	          YEAR(NOW()) AS 'YEAR',
+	          MONTH(NOW()) AS 'MONTH',
+	          DAY(NOW()) AS 'DAY',
+           HOUR(NOW()) AS 'HOUR',
+           MINUTE(NOW()) AS 'MINUTE',
+           SECOND(NOW()) AS 'SECOND';
+       ```
+     
 - ### 제어 흐름 함수 (control flow function)
 - ### 제어 흐름 함수 (control flow function)
 

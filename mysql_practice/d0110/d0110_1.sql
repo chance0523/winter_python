@@ -127,8 +127,11 @@ FROM
 SET @singer = '성시경';
 SELECT CONCAT('거기 누구 없소...',' -- 이하이') AS '결과';
 SELECT CONCAT('거리에서...', @singer) AS '결과';
-SELECT CONCAT_WS('/','방탄소년단','블랙핑크','레드벨벳')
-AS '아이돌 그룹';
+SELECT 
+    CONCAT_WS('/',
+            '방탄소년단',
+            '블랙핑크',
+            '레드벨벳') AS '아이돌 그룹';
 
 -- CONCAT() 이용해서 하나에 컬럼에 2개의 컬럼값 표시
 -- 단가 X 수량 = 입금액
@@ -166,10 +169,10 @@ FROM
 -- 변수 사용
 SET @irm = '가수이름 => ';
 SET @cm ='cm';
-SELECT
-CONCAT(@irm, name) AS '이름',
-CONCAT(height,@cm) AS '키'
-FROM userTbl;
+SELECT 
+    CONCAT(@irm, name) AS '이름', CONCAT(height, @cm) AS '키'
+FROM
+    userTbl;
 
 -- 변수 사용 x, 문자열 사용
 SELECT 
@@ -193,17 +196,19 @@ SELECT FORMAT(AVG(amount), 1) FROM buyTbl; -- 3.4
 -- INSERT(문자열, 시작위치, 길이, 교체문자열)
 -- REPLACE(문자열, 원래문자열, 교체문자열)
 SET @userPhone = "010-5555-6606";
-SELECT INSERT(@userPhone, 5, 4, "####");
-SELECT INSERT(@userPhone, 10, 4, "####");
-SELECT REPLACE(@userPhone, "5555", "####");
-SELECT INSERT(INSERT(@userPhone, 10, 4, '####'), 5, 4, "####");
+SELECT INSERT(@userPhone, 5, 4, "####"); -- 010-####-6606
+SELECT INSERT(@userPhone, 10, 4, "####"); -- 010-5555-####
+SELECT REPLACE(@userPhone, "5555", "####"); -- 010-####-6606
+SELECT INSERT(INSERT(@userPhone, 10, 4, '####'), 5, 4, "####"); -- 010-####-####
 
 -- 특정 부분만 표시하기
 -- LEFT(문자열, 길이), RIGHT(문자열, 길이)
 -- : 왼쪽이나 오른쪽을 기준으로 길이만큼 잘라서 표시
 -- SUBSTRING(문자열, 시작위치, 길이) : 시작위치에서 길이만큼 잘라서 표시한다.
 SELECT @userPhone, LEFT(@userPhone, 3), RIGHT(@userPhone, 4);
-SELECT SUBSTRING(@userPhone, 5, 9);
+SELECT @userPhone, LEFT(@userPhone, 3); -- 010-5555-6606	010
+SELECT @userPhone, RIGHT(@userPhone, 3); -- 010-5555-6606	606
+SELECT SUBSTRING(@userPhone, 5, 9); -- 5555-6606
 
 -- LPAD(문자열, 길이, 채울 문자열), RPAD(문자열, 길이, 채울문자열)
 -- : 왼쪽이나 오른쪽에 길이만큼 늘려 문자열을 채운다.
@@ -236,9 +241,9 @@ SELECT RPAD(name, 7, " 회원님") AS '회원 목록' FROM userTbl;
 -- YEAR, DATE, TIME, DATEITME
 
 -- 문자열 => 날짜형
-SELECT CAST('2020-12-12' AS DATE) AS DATE;
-SELECT CAST('2019-12-25 12:12:12' AS DATETIME);
-SELECT CAST('12:12:12' AS TIME) AS TIME;
+SELECT CAST('2020-12-12 12:12:12' AS DATE) AS DATE; -- 2020-12-12
+SELECT CAST('2019-12-25 12:12:12' AS DATETIME); -- 2019-12-25 12:12:12
+SELECT CAST('2019-12-25 12:12:12' AS TIME) AS TIME; -- 12:12:12
 
 -- 현재 시간과 날짜 출력
 -- NOW() : 내장함수로 현재의 날짜와 시간을 표시
@@ -248,18 +253,18 @@ SELECT CAST('12:12:12' AS TIME) AS TIME;
 SELECT NOW();
 SELECT 
     NOW(),
-    CAST(NOW() AS DATE) AS '등록 날짜',
+    CAST(NOW() AS DATE) AS '현재 날짜',
     CAST(NOW() AS TIME) AS '현재 시각';
 
 SELECT 
     SYSDATE(),
-    CAST(SYSDATE() AS DATE) AS '등록 날짜',
-    CAST(SYSDATE() AS TIME) AS '등록 시간';
+    CAST(SYSDATE() AS DATE) AS '현재 날짜',
+    CAST(SYSDATE() AS TIME) AS '현재 시각';
 
 SELECT 
     SYSDATE(),
-    CURDATE() AS '등록 날짜',
-    CURDATE() AS '등록 시간';
+    CURDATE() AS '현재 날짜',
+    CURTIME() AS '현재 시각';
 
 CREATE TABLE timeTable
 (tYear YEAR, tDay DATE, tTime TIME, tDateTime DATETIME);
@@ -268,7 +273,7 @@ SELECT * FROM timeTable;
 INSERT INTO timeTable (tYear, tDay, tTime, tDateTime)
 VALUES (CURDATE(), CURDATE(),CURTIME(),SYSDATE());
 
-SELECT '오늘은',YEAR(NOW()),'년',MONTH(NOW()),'월',DAY(now()),'일입니다.';
+SELECT '오늘은', YEAR(NOW()), '년', MONTH(NOW()), '월', DAY(now()), '일입니다.';
 
 -- HOUR(시간), MINUTE(시간), SECOND(시간), TIME(시간)
 SELECT 
