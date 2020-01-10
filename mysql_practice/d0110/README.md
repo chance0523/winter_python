@@ -175,13 +175,20 @@
            END AS '오늘 요일';
        ```
    - #### DATEDIFF / TIMEDIFF
-     + ##### DATEDIFF(날짜1, 날짜2) : 날짜1 - 날짜2
-     + ##### TIMEDIFF(시간1, 시간2) : 시간1 - 시간2
+     + ##### DATEDIFF(날짜1, 날짜2) : 날짜1 - 날짜2 / TIMEDIFF(시간1, 시간2) : 시간1 - 시간2
        ```MYSQL
        SELECT DATEDIFF('2021-01-01',NOW());  -- 357
        SELECT TIMEDIFF('17:50:00', CURTIME());  -- 03:51:20
        ```
      
-- ### 제어 흐름 함수 (control flow function)
-- ### 제어 흐름 함수 (control flow function)
+- ### 시스템 함수 (system function)
+   - #### DATABASE / USER / VERSION
+     + ##### DATABASE : 사용중인 데이터베이스 표시 / USER : 사용자 표시 / VERSION : MySQL 버전 표시
+       ```mysql
+       SELECT 
+           DATABASE() AS '데이터베이스',
+           USER() AS '사용자',
+           VERSION() AS 'MySQL 버전';
+       -- world	root@localhost	8.0.18
+       ```
 
