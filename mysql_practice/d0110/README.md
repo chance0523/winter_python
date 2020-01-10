@@ -158,12 +158,30 @@
            SECOND(NOW()) AS 'SECOND';
        ```
    - #### DAYOFWEEK / MONTHNAME / DAYOFYEAR
-     + ##### DAYOFWEEK(날짜) : 요일표시 1~7 (일~토)
+     + ##### DAYOFWEEK(날짜) : 요일표시 1 ~ 7 (일 ~ 토)
      + ##### MONTHNAME(날짜) : 달을 영문으로 표시
      + ##### DAYOFYEAR(날짜) : 1년 중 몇번째 날인지 표시
        ```MySQL
-       
+       SET @today = DAYOFWEEK(NOW());
+       SELECT 
+           CASE @today
+               WHEN 1 THEN '일요일'
+               WHEN 2 THEN '월요일'
+               WHEN 3 THEN '화요일'
+               WHEN 4 THEN '수요일'
+               WHEN 5 THEN '목요일'
+               WHEN 6 THEN '금요일'
+               ELSE '토요일'
+           END AS '오늘 요일';
        ```
+   - #### DATEDIFF / TIMEDIFF
+     + ##### DATEDIFF(날짜1, 날짜2) : 날짜1 - 날짜2
+     + ##### TIMEDIFF(시간1, 시간2) : 시간1 - 시간2
+       ```MYSQL
+       SELECT DATEDIFF('2021-01-01',NOW());  -- 357
+       SELECT TIMEDIFF('17:50:00', CURTIME());  -- 03:51:20
+       ```
+     
 - ### 제어 흐름 함수 (control flow function)
 - ### 제어 흐름 함수 (control flow function)
 

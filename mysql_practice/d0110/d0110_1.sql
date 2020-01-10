@@ -290,7 +290,7 @@ SELECT
 SELECT DAYOFWEEK(NOW()), MONTHNAME(NOW()), DAYOFYEAR(NOW());
 
 /* CASE문을 이용하여 요일 표시하기 */
-SET @today = dayofweek(NOW());
+SET @today = DAYOFWEEK(NOW());
 SELECT 
     CASE @today
         WHEN 1 THEN '일요일'
