@@ -191,4 +191,15 @@
            VERSION() AS 'MySQL 버전';
        -- world	root@localhost	8.0.18
        ```
-
+***
+- ### JOIN
+   - #### INNER JOIN / OUTER JOIN / CROSS JOIN / SELF JOIN
+     + ##### INNER JOIN
+     
+- ### UNION / UNION ALL / NOT IN / IN
+   - #### UNION / UNION ALL
+     + ##### UNION
+     + ##### UNION ALL
+   - #### NOT IN / IN
+     + ##### NOT IN
+     + ##### IN
