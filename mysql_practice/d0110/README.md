@@ -20,7 +20,7 @@
        SELECT CONVERT('2nd', SIGNED INTEGER); -- 2
        SELECT CONVERT('2nd123', SIGNED INTEGER); -- 2
        ```
-
+***
 - ### 제어 흐름 함수 (control flow function)
    - #### IF / IFNULL / NULLIF
      + ##### IF(수식, True 값1, False 값2)
@@ -195,6 +195,36 @@
 - ### JOIN
    - #### INNER JOIN / OUTER JOIN / CROSS JOIN / SELF JOIN
      + ##### INNER JOIN
+       ```MYSQL
+       SELECT 
+           B.userID AS '아이디',
+           B.prodName AS '상품명',
+           B.amount AS '수량',
+           U.name AS '이름',
+           U.addr AS '지역'
+       FROM
+           buyTbl B
+               INNER JOIN
+           userTbl U ON B.userID = U.userID;
+       -- 아이디   상품명  수량  이름    지역
+       --  KBS    운동화   2   김범수   경남
+       ```
+     + ##### OUTER JOIN
+       ```MYSQL
+       SELECT 
+           S.stdName, S.addr, C.clubName, C.roomNo
+       FROM
+           stdTbl S
+               LEFT OUTER JOIN
+           stdclubTbl SC ON S.stdName = SC.stdName
+               LEFT OUTER JOIN
+           clubTbl C ON SC.clubName = C.clubName
+       ORDER BY S.stdName;
+       -- stdName addr clubName roomNo
+       --  김범수  경남   바둑    102호
+       ```
+     + ##### CROSS JOIN
+     + ##### SELF JOIN
      
 - ### UNION / UNION ALL / NOT IN / IN
    - #### UNION / UNION ALL
