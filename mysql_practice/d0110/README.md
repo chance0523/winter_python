@@ -7,14 +7,14 @@
       SET @b = 'MySQL';
       ```
    - #### variable type conversion
-     + CAST ( ... AS variable type)
+     + ##### CAST ( ... AS variable type)
         ```mysql
         -- 실수 => 정수
         SELECT
             CAST(AVG(amount) AS SIGNED INTEGER) AS '평균 구매 갯수'
         FROM buyTbl;
         ```
-     + CONVERT ( ... , variable type)
+     + ##### CONVERT ( ... , variable type)
        ```mysql
        -- 숫자가 포함된 문자열
        SELECT CONVERT('2nd', SIGNED INTEGER); -- 2
@@ -51,8 +51,18 @@
           END AS '결과';
        ```
 - ### 문자열 함수 (string function)
-   - #### IF / IFNULL / NULLIF
-     + ##### IF(수식, True 값1, False 값2)
+   - #### CONCAT / CONCAT_WS
+     + ##### CONCAT(문자열1, 문자열2, ... ) : 문자열이나 레코드를 이어준다.
+       ```mysql
+       SELECT 
+           CONCAT('가수이름 => ', name) AS '이름',
+           CONCAT(height, 'cm') AS '키'
+       FROM
+           userTbl;
+       /* 이름                  키
+       가수이름 => 바비킴	176cm */
+       ```
+     + ##### CONCAT_WS(구분자, 문자열1, 문자열2, ...) : 문자열이나 레코드를 구분자와 함께 이어준다.
 
 - ### 날짜 및 시간 함수 (date and time function)
 - ### 제어 흐름 함수 (control flow function)
