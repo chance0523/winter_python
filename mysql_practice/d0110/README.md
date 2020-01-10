@@ -39,7 +39,7 @@
        SELECT NULLIF(50 + 50, 40 + 60); -- NULL
        SELECT NULLIF(50 + 50, 40 + 40); -- 100
        ```
-   - #### CASE    
+   - #### CASE
      + ##### CASE 값1 WHEN 값2 THEN 결과값1 ... ELSE 결과값2 END
        ```mysql
        SET @age = 5;
