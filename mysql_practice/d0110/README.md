@@ -20,7 +20,7 @@
        SELECT CONVERT('2nd', SIGNED INTEGER); -- 2
        SELECT CONVERT('2nd123', SIGNED INTEGER); -- 2
        ```
-       
+
 - ### 제어 흐름 함수 (control flow function)
    - #### IF / IFNULL / NULLIF
      + ##### IF(수식, True 값1, False 값2)

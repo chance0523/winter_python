@@ -64,7 +64,7 @@
 -- IN : 두번째 쿼리의 결과만 조회 
 
 -- SELECT 첫번째 쿼리 
---		WHERE ... [NOT IN / IN ] ( SELECT 두번째 쿼리 )
+-- 		WHERE ... [NOT IN / IN ] ( SELECT 두번째 쿼리 )
 
 -- SELECT * 또는 컬럼명 FROM 테이블1
 --    WHERE 조건절1 NOT IN 또는 IN ( SELECT * 또는 컬럼명 FROM 테이블2 WHERE 조건절2) ;
