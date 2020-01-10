@@ -59,11 +59,27 @@
            CONCAT(height, 'cm') AS '키'
        FROM
            userTbl;
-       /* 이름                  키
-       가수이름 => 바비킴	176cm */
+       
+       /* 이름                     키
+          가수이름 => 바비킴	    176cm */
        ```
      + ##### CONCAT_WS(구분자, 문자열1, 문자열2, ...) : 문자열이나 레코드를 구분자와 함께 이어준다.
-
+       ```mysql
+       SELECT 
+           CONCAT_WS('/',
+                '방탄소년단',
+                '블랙핑크',
+                '레드벨벳') AS '아이돌 그룹';
+       -- 방탄소년단/블랙핑크/레드벨벳
+       ```
+   - #### FORMAT
+     + ##### FORMAT(숫자/필드명/수식, 소숫점 자리수) : 소숫점 자리 표시
+       ```MySQL
+       SET @myNumber = 123.567890;
+       SELECT FORMAT(@myNumber, 1); -- 123.6
+       SELECT FORMAT(@myNumber, 4); -- 123.5679
+       ```
+    
 - ### 날짜 및 시간 함수 (date and time function)
 - ### 제어 흐름 함수 (control flow function)
 - ### 제어 흐름 함수 (control flow function)
