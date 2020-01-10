@@ -277,9 +277,12 @@ SELECT '오늘은', YEAR(NOW()), '년', MONTH(NOW()), '월', DAY(now()), '일입
 
 -- HOUR(시간), MINUTE(시간), SECOND(시간), TIME(시간)
 SELECT 
-    HOUR(CURTIME()) AS 'HOUR',
-    MINUTE(CURTIME()) AS 'MINUTE',
-    SECOND(CURTIME()) AS 'SECOND';
+	YEAR(NOW()) AS 'YEAR',
+	MONTH(NOW()) AS 'MONTH',
+	DAY(NOW()) AS 'DAY',
+    HOUR(NOW()) AS 'HOUR',
+    MINUTE(NOW()) AS 'MINUTE',
+    SECOND(NOW()) AS 'SECOND';
     
 -- DAYOFWEEK(날짜) : 요일표시 1~7 (일~토)
 -- MONTHNAME(날짜) : 달을 영문으로 표시

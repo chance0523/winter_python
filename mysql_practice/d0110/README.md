@@ -147,7 +147,7 @@
        -- 2020-01-10 12:31:10	2020-01-10	12:31:10
        ```
    - #### YEAR / MONTH / DAY / HOUR / MINUTE / SECOND
-     + #####
+     + ##### 날짜 또는 시간에서 연, 월, 일, 시, 분, 초를 구한다.
        ```MYSQL
        SELECT 
 	       YEAR(NOW()) AS 'YEAR',
@@ -157,7 +157,13 @@
            MINUTE(NOW()) AS 'MINUTE',
            SECOND(NOW()) AS 'SECOND';
        ```
-     
+   - #### DAYOFWEEK / MONTHNAME / DAYOFYEAR
+     + ##### DAYOFWEEK(날짜) : 요일표시 1~7 (일~토)
+     + ##### MONTHNAME(날짜) : 달을 영문으로 표시
+     + ##### DAYOFYEAR(날짜) : 1년 중 몇번째 날인지 표시
+       ```MySQL
+       
+       ```
 - ### 제어 흐름 함수 (control flow function)
 - ### 제어 흐름 함수 (control flow function)
 
