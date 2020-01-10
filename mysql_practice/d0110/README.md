@@ -1,4 +1,4 @@
-# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#JOIN) / [union](#UNION)
+# 1/10 - [variable](#variable) / [built-in functions](#제어-흐름-함수-(control-flow-function)) / [join](#JOIN) / [union](#UNION)
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
