@@ -1,4 +1,4 @@
-# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#join) / [union](#union-/-in)
+# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#join) / [union](#union)
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
@@ -227,7 +227,7 @@
      + ##### CROSS JOIN
      + ##### SELF JOIN
      
-- ### UNION / IN
+- ### UNION
    - #### UNION / UNION ALL
      + ##### UNION
      + ##### UNION ALL
