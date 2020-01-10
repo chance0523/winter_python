@@ -1,4 +1,4 @@
-# 1/10 - variable[#variable] / built-in functions / join / union
+# 1/10 - [variable](#variable) / [built-in functions](#control flow function) / [join](#JOIN) / union
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
