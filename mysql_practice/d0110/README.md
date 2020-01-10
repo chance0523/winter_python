@@ -3,18 +3,15 @@
   - #### create variable
     + ##### SET @variable_name;
       ```mysql
-      SET @a = 1; 
+      SET @a = 1;
+      SET @b = 'MySQL';
       ```
-      ```
-      def helloWorld():
-        print('Hello world' * 3)
-      helloWorld()
-        ``` 
-    + ##### 인자 o, return 값 x
-      ```python
-      def messagePrint(message):
-        print(message * 3)
-      messagePrint('Hello world * 3')
+    + ##### (cast / convert) variable type
+      ```mysql
+      -- 실수 => 양의 정수
+      SELECT
+          CAST(AVG(amount) AS SIGNED INTEGER) AS '평균 구매 갯수'
+      FROM buyTbl;
       ```
     + ##### 인자 x, return 값 x
       ```python

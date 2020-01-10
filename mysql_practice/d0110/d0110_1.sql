@@ -33,3 +33,22 @@ FROM
 WHERE
     height > 180;
 
+-- 데이터 형변환 CASTING p.236
+-- CAST ( ... AS 데이터형식)
+-- CONVERT ( ... AS 데이터형식)
+-- 데이터형식 : BINARY, CHAR(), DATE, TIME, SIGNED INTERGER, UNSIGNED INTEGER
+
+-- 평균 구매 개수가 실수 => 정수
+SELECT * FROM buyTbl;
+-- 실수형으로 결과값 리턴
+SELECT AVG(amount) AS '평균 구매 개수' FROM buyTbl; -- 3.3571
+-- 양의 정수형으로 결과값 리턴
+SELECT 
+    CAST(AVG(amount) AS SIGNED INTEGER) AS '평균 구매 개수'
+FROM
+    buyTbl; -- 3
+
+SELECT CAST(23.5 AS CHAR(10));
+-- 숫자가 포함된 문자열 => 양의 정수
+SELECT CAST('2nd' AS SIGNED INTEGER); -- 2
+SELECT CAST('2nd123' AS SIGNED INTEGER); -- 2
