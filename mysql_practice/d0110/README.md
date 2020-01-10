@@ -1,4 +1,4 @@
-# 1/10 - variable
+# 1/10 - variable / control flow function
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
@@ -6,50 +6,49 @@
       SET @a = 1;
       SET @b = 'MySQL';
       ```
-    + ##### (cast / convert) variable type
+   - #### (cast / convert) variable type
+     + CAST ( ... AS variable type)
+        ```mysql
+        -- 실수 => 정수
+        SELECT
+            CAST(AVG(amount) AS SIGNED INTEGER) AS '평균 구매 갯수'
+        FROM buyTbl;
+        ```
+     + CONVERT ( ... , variable type)
+       ```mysql
+       -- 숫자가 포함된 문자열
+       SELECT CONVERT('2nd', SIGNED INTEGER); -- 2
+       SELECT CONVERT('2nd123', SIGNED INTEGER); -- 2
+       ```
+   
+  - #### 제어 흐름 함수 (control flow function)
+    + ##### IF(수식, True 값1, False 값2)
       ```mysql
-      -- 실수 => 양의 정수
-      SELECT
-          CAST(AVG(amount) AS SIGNED INTEGER) AS '평균 구매 갯수'
-      FROM buyTbl;
+      SELECT IF(100 < 200, '크다', '작다'); -- 크다
+      SELECT IF(100 > 200, '크다', '작다'); -- 작다
       ```
-    + ##### 인자 x, return 값 x
-      ```python
-      def classPrint():
-        return 'MySQL, sqLite'
-      print(classPrint())
+    + ##### IFNULL(수식1, 수식2) : 수식1이 NULL이 아니면 수식1 반환, NULL 이면 수식2 반환
+      ```mysql
+      SELECT IFNULL(NULL, 'NULL값이다'); -- NULL값이다
+      SELECT IFNULL(100 + 300, 'NULL값이다.'); -- 400
       ```
-    + ##### 인자 o, return 값 o
-      ```python
-      def sum(n):
-        sum = 0
-        for i in range(1, n + 1):
-        sum += i
-        return sum
-      print(sum(100))
+    + ##### NULLIF(수식1, 수식2) : 수식1과 수식2가 같으면 NULL, 다르면 수식1 반환
+      ```mysql
+      SELECT NULLIF(50 + 50, 40 + 60); -- NULL
+      SELECT NULLIF(50 + 50, 40 + 40); -- 100
       ```
-    + ##### 다중 return
-      ```python
-      def multiReturn(n, m):
-        return n + m, n - m
-      print(multiReturn(2, 3)) # tuple로 return
+    + ##### CASE
+      ```mysql
+      SET @age = 5;
+      SELECT 
+         CASE @age
+             WHEN 0 THEN '영'
+             WHEN 5 THEN '오'
+             WHEN 10 THEN '십'
+             ELSE '지정된 숫자가 아니다'
+         END AS '결과';
       ```
-  - #### 가변 인자 => def function_name (*args):
-    + ##### *args
-      ```python
-      def studentName(*args):
-        print(args)
-      studentName('Jake')
-      studentName('Jake','Amy')
-      studentName('Jake','Amy','Tilda')
-      ```
-    + ##### *kwargs
-      ```python
-      def printDict(**kwargs):
-        print(kwargs)            # dictionary 출력
-        print(kwargs['key1'])    # 'key1'의 값 출력
-      printDict(key1 = 'hippo', key2 = 'cat')
-      ```
+
 - ### lambda
   - #### lambda 매개변수 ... : 표현식
     + ##### 함수를 간결하게 한 줄로 만들 때 사용
