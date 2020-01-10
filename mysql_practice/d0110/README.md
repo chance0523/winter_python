@@ -150,9 +150,9 @@
      + #####
        ```MYSQL
        SELECT 
-	          YEAR(NOW()) AS 'YEAR',
-	          MONTH(NOW()) AS 'MONTH',
-	          DAY(NOW()) AS 'DAY',
+	       YEAR(NOW()) AS 'YEAR',
+	       MONTH(NOW()) AS 'MONTH',
+	       DAY(NOW()) AS 'DAY',
            HOUR(NOW()) AS 'HOUR',
            MINUTE(NOW()) AS 'MINUTE',
            SECOND(NOW()) AS 'SECOND';
