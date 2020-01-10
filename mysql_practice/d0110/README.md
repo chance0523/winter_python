@@ -1,4 +1,4 @@
-# 1/10 - [variable](#variable) / [built-in functions](#control flow function) / [join](#JOIN) / union
+# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#JOIN) / [union](#UNION)
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
@@ -21,6 +21,7 @@
        SELECT CONVERT('2nd123', SIGNED INTEGER); -- 2
        ```
 ***
+- ## 내장함수
 - ### 제어 흐름 함수 (control flow function)
    - #### IF / IFNULL / NULLIF
      + ##### IF(수식, True 값1, False 값2)
@@ -226,7 +227,7 @@
      + ##### CROSS JOIN
      + ##### SELF JOIN
      
-- ### UNION / UNION ALL / NOT IN / IN
+- ### UNION
    - #### UNION / UNION ALL
      + ##### UNION
      + ##### UNION ALL
