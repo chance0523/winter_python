@@ -57,7 +57,16 @@ select * from empTbl;
 
 
 -- 우대리 직원의 상관의 구내번호를 찾아라 
-
+SELECT 
+    a.EMP AS '부하직원',
+    b.EMP AS '직속상관',
+    B.empTel AS '직속상관연락처'
+FROM
+    empTbl A
+        INNER JOIN
+    empTbl B ON A.manager = B.emp
+WHERE
+    A.emp = '우대리';
 
 
 
@@ -76,7 +85,7 @@ SHOW TABLES;
 SELECT * FROM clubTbl;
 SELECT * FROM stdTbl;
 SELECT stdName, addr FROM stdTbl
-UNION ALL
+	UNION ALL
 SELECT clubName, roomNO FROM clubTbl;
 
 -- NOT IN : 첫번째 쿼리의 결과중 두번째 쿼리에 해당하는 것을 제외 
@@ -119,14 +128,15 @@ WHERE
     emp_no >= 499995 AND gender = 'M'
     UNION SELECT from_date, to_date FROM dept_emp;
     
-SELECT * from employees where year(hire_date)>1999;
-select * from employees where year(hire_date)>1999;
-
-select * from dept_emp where year(to_date)=9999 and emp_no>=499995;
-select * from employees where (year(hire_date)>=1999 and month(hire_date)>=9) OR gender = 'F';
-select * from employees where year(hire_date)>1999;
-select * from employees where (year(hire_date)>1999 and month(hire_date)>=9) OR (year(hire_date)>1999);
-select * from employees where (year(hire_date)>1999) or (year(hire_date)>1999 and month(hire_date)>=9);
 
 use employees;
 select * from employees where gender = 'M' or year(hire_date)>1995;
+
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    ((YEAR(hire_date) = 1999)
+        AND (MONTH(hire_date) >= 9))
+        OR (YEAR(hire_date) > 1999);
