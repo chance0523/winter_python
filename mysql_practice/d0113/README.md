@@ -1,4 +1,4 @@
-# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view) / [PROCEDURE](#stored-procedure)
+# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view) / [STORED PROCEDURE](#stored-procedure)
 - ### JOIN
    - #### CROSS JOIN / SELF JOIN
      + ##### CROSS JOIN
