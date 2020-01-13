@@ -46,7 +46,7 @@
 
 - ### TABLE
   - #### ADD / CHANGE / DROP FIELD
-    + ##### ADD
+    + ##### ADD FIELD
       ```mysql
       -- userTbl_aa 에 homePage(VARCHAR(30)) 필드 추가하기
       ALTER TABLE userTbl_aa
@@ -54,13 +54,13 @@
       DEFAULT 'http://google.com'
       NULL;
       ```
-    + ##### CHANGE
+    + ##### CHANGE FIELD
       ```mysql
       -- userTbl_aa의 age 필드명을 userAge로 변경
       ALTER TABLE userTbl_aa
       CHANGE COLUMN age userAge INT(3);
       ```
-    + ##### DROP
+    + ##### DROP FILED
       ```mysql
       -- userTbl_aa의 height 필드를 삭제
       ALTER TABLE userTbl_aa
@@ -94,24 +94,28 @@
       ```
  - ### VIEW
    - #### CREATE / DROP VIEW
-     + ##### CREATE
+     + ##### CREATE VIEW
        ```mysql
        -- userTbl 테이블에서 id, name, addr => v_userTbl 뷰 생성
        CREATE VIEW v_userTbl AS
        SELECT userID, name, addr FROM userTbl;
        ```
-     + ##### DROP
+     + ##### DROP VIEW
        ```mysql
        DROP VIEW v_userTbl;
        ```
-     + ##### INSERT
+     + ##### INSERT VIEW
        ```mysql
        INSERT INTO v_userTbl VALUES ('ASS','안성수',2009,'부산');
+       -- view와 원본 table 둘 다에 삽입된다.
        ```
-       ##### view와 원본 table 둘 다에 삽입된다.
-     
-     + ##### UPDATE
+     + ##### UPDATE VIEW
        ```MYSQL
        UPDATE v_userTbl SET addr = '서울';
+       -- view와 원본 table 둘 다 수정된다.
        ```
-       ##### view와 원본 table 둘 다 수정된다.
+     + ##### DELETE RECORD
+       ```MYSQL
+       DELETE FROM v_userTbl WHERE name = '안성수';
+       -- view와 원본 table의 레코드 둘 다 삭제된다.
+       ```
