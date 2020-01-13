@@ -1,4 +1,4 @@
-# 1/13 - [join](#join) / [union](#union) / [table](#table)
+# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view)
 - ### JOIN
    - #### CROSS JOIN / SELF JOIN
      + ##### CROSS JOIN
@@ -87,8 +87,31 @@
         FOREIGN KEY (userID)
         REFERENCES userTbl_aa(userID);
       ```
-    + ##### DRIP FOREIGN KEY
+    + ##### DROP FOREIGN KEY
       ```mysql
       ALTER TABLE buyTbl_aa
         DROP FOREIGN KEY FK_userTbl_aa_buyTbl_aa;
       ```
+ - ### VIEW
+   - #### CREATE / DROP VIEW
+     + ##### CREATE
+       ```mysql
+       -- userTbl 테이블에서 id, name, addr => v_userTbl 뷰 생성
+       CREATE VIEW v_userTbl AS
+       SELECT userID, name, addr FROM userTbl;
+       ```
+     + ##### DROP
+       ```mysql
+       DROP VIEW v_userTbl;
+       ```
+     + ##### INSERT
+       ```mysql
+       INSERT INTO v_userTbl VALUES ('ASS','안성수',2009,'부산');
+       ```
+       ##### view와 원본 table 둘 다에 삽입된다.
+     
+     + ##### UPDATE
+       ```MYSQL
+       UPDATE v_userTbl SET addr = '서울';
+       ```
+       ##### view와 원본 table 둘 다 수정된다.

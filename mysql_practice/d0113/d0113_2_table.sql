@@ -124,6 +124,11 @@ emp_no, first_name, last_name, gender
 4) employees_test 테이블에서 gender 컬럼 삭제
 5) employees_test 테이블에서 last_name을 family_name으로 변경
 6) employees_test 테이블에서 기본키는 emp_no으로 지정
+7) dept_emp 테이블에서 employees_test의 emp_no을 참고하여 레코드 복사하여 새 테이블 만들기 => dept_emp_test
+employees_test의 emp_no은 외래키로 설정 예정이므로
+dept_emp_test의 emp_no과 같은 값이어야한다.
+8) dept_emp_test의 외래키로 emp_no 설정하기
+참조외래키 필드명은 employees_test의 emp_no
 */
 CREATE TABLE employees_test (SELECT emp_no,first_name,last_name,gender FROM employees limit 10); -- 테이블 생성
 select * from employees_test;
@@ -142,3 +147,29 @@ ALTER TABLE employees_test
     PRIMARY KEY (emp_no); -- emp_no을 PRIMARY KEY로 설정
 
 desc employees_test;
+
+CREATE TABLE dept_emp_test (SELECT * FROM dept_emp LIMIT 10); -- limit 말고 where로 해도됨
+SELECT * FROM dept_emp_test; -- dept_emp_test 테이블 생성
+
+ALTER TABLE dept_emp_test
+  ADD CONSTRAINT FK_employees_test_dept_emp_test
+  FOREIGN KEY (emp_no)
+  REFERENCES employees_test(emp_no);  -- dept_emp_test의 emp_no을 외래키로 설정
+
+desc employees_test;
+desc dept_emp_test;
+
+
+
+/* ---------------------------------------- */
+-- 외래키로 지정되어 있는 테이블 삭제하기
+select * from employees_test; -- 기본키
+select * from dept_emp_test; -- 외래키
+-- employees_test 삭제하기
+-- 외래키가 잡혀 있어서 drop 불가!
+-- 1) dept_emp_test의 외래키 삭제
+ALTER TABLE dept_emp_test
+DROP FOREIGN KEY FK_employees_test_dept_emp_test;
+-- 2) employees_test 삭제하기
+DROP TABLE employees_test;
+show tables;
