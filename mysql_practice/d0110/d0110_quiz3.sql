@@ -160,6 +160,20 @@ SELECT * FROM dept_emp; -- to_date ,dept_no
 SELECT * FROM departments; -- dept_no
 
 SELECT 
+    *
+FROM
+    salaries S
+        INNER JOIN
+    dept_emp DE ON S.to_date = DE.to_date
+        INNER JOIN
+    departments D ON DE.dept_no = D.dept_no
+WHERE
+    DE.to_date = '9999-01-01'
+GROUP BY D.dept_name
+-- ORDER BY AVG(S.salary) DESC
+LIMIT 5;
+
+SELECT 
     D.dept_name AS '부서명(dept_name)',
     AVG(S.salary) AS '급여 평균'
 FROM
@@ -169,12 +183,10 @@ FROM
         INNER JOIN
     departments D ON DE.dept_no = D.dept_no
 WHERE
-    DE.to_date = '9999-01-01' AND S.to_date = '9999-01-01'
+    DE.to_date = '9999-01-01'
 GROUP BY D.dept_name
 ORDER BY AVG(S.salary) DESC
 LIMIT 5;
-
-
 -- 8. 급여 평균이 가장 높은 부서를 제외하고, 급여 평균이 높은 부서를 5개를 출력하시오. 
 
 

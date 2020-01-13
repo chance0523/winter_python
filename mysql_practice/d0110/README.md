@@ -1,4 +1,4 @@
-# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#join) / [union](#union)
+# 1/10 - [variable](#variable) / [built-in functions](#내장함수) / [join](#join)
 - ### variable
   - #### create variable
     + ##### SET @variable_name;
@@ -224,13 +224,3 @@
        -- stdName addr clubName roomNo
        --  김범수  경남   바둑    102호
        ```
-     + ##### CROSS JOIN
-     + ##### SELF JOIN
-     
-- ### UNION
-   - #### UNION / UNION ALL
-     + ##### UNION
-     + ##### UNION ALL
-   - #### NOT IN / IN
-     + ##### NOT IN
-     + ##### IN
