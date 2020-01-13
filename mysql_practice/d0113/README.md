@@ -1,4 +1,4 @@
-# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view)
+# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view) / [PROCEDURE](#stored-procedure)
 - ### JOIN
    - #### CROSS JOIN / SELF JOIN
      + ##### CROSS JOIN
@@ -119,3 +119,4 @@
        DELETE FROM v_userTbl WHERE name = '안성수';
        -- view와 원본 table의 레코드 둘 다 삭제된다.
        ```
+- ### STORED PROCEDURE
