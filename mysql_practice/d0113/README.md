@@ -1,4 +1,4 @@
-# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view) / [STORED PROCEDURE](#stored-procedure)
+# 1/13 - [JOIN](#join) / [UNION](#union) / [TABLE](#table) / [VIEW](#view) / [STORED PROCEDURE](#stored-procedure) / [IF](#if)
 - ### JOIN
    - #### CROSS JOIN / SELF JOIN
      + ##### CROSS JOIN
@@ -120,3 +120,49 @@
        -- view와 원본 table의 레코드 둘 다 삭제된다.
        ```
 - ### STORED PROCEDURE
+  - #### CREATE / CALL STORED PROCEDURE
+    - ##### CREATE STORED PROCEDURE
+      ```MYSQL
+      DELIMITER $$
+      CREATE PROCEDURE varTest()
+      BEGIN
+        SELECT 'hello MySQL';
+      END $$
+      DELIMITER ;
+      ```
+    - ##### CALL STORED PROCEDURE
+      ```MYSQL
+      CALL varTest();
+      ```
+  - #### STORED PROCEDURE WITH PARAMETERS
+    + ##### Calculator Procedure
+      ```mysql
+      -- calculator procedure
+      DELIMITER $$
+      CREATE PROCEDURE calPro(IN num1 INT(3), num2 INT(3))
+      BEGIN
+      SELECT num1, num2,
+      concat(num1+num2) AS '+' ,concat(num1-num2) AS '-',
+      concat(num1*num2) AS '*', format(concat(num1/num2),2) AS '/';
+      END $$
+      DELIMITER ;
+
+      CALL calPro(10, 5)
+      ```
+    - #### IF
+      - ##### USE IF WITH PROCEDURE
+        ```MYSQL
+        DELIMITER $$
+        CREATE PROCEDURE ifTest1()
+        BEGIN
+          SET @num = 100;
+          IF @num > 100 THEN
+              SELECT '100보다 크다';
+          ELSE
+              SELECT '100보다 작거나 같다';
+          END IF;
+        END $$
+        DELIMITER ;
+        
+        CALL ifTest1();
+        ```
