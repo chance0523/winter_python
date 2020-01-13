@@ -45,7 +45,7 @@
        ```
 
 - ### TABLE
-  - #### ADD / CHANGE FIELD
+  - #### ADD / CHANGE / DROP FIELD
     + ##### ADD
       ```mysql
       -- userTbl_aa 에 homePage(VARCHAR(30)) 필드 추가하기
@@ -59,4 +59,36 @@
       -- userTbl_aa의 age 필드명을 userAge로 변경
       ALTER TABLE userTbl_aa
       CHANGE COLUMN age userAge INT(3);
+      ```
+    + ##### DROP
+      ```mysql
+      -- userTbl_aa의 height 필드를 삭제
+      ALTER TABLE userTbl_aa
+      DROP COLUMN height;
+      ```
+  - #### ADD / DROP PRIMARY KEY
+    + ##### ADD PRIMARY KEY
+      ```MYSQL
+      -- userTbl_aa 테이블에서 userID를 기본키로 설정하기
+      ALTER TABLE userTbl_aa
+        ADD CONSTRAINT PK_userTbl_aa_userID
+        PRIMARY KEY(userID);
+      ```
+    + ##### DROP PRIMARY KEY
+      ```MYSQL
+      ALTER TABLE userTbl_aa
+        DROP PRIMARY KEY;
+      ```
+  - #### ADD / DROP FOREIGN KEY
+    + ##### ADD FOREIGN KEY
+      ```mysql
+      ALTER TABLE buyTbl_aa
+        ADD CONSTRAINT FK_userTbl_aa_buyTbl_aa
+        FOREIGN KEY (userID)
+        REFERENCES userTbl_aa(userID);
+      ```
+    + ##### DRIP FOREIGN KEY
+      ```mysql
+      ALTER TABLE buyTbl_aa
+        DROP FOREIGN KEY FK_userTbl_aa_buyTbl_aa;
       ```
