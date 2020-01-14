@@ -99,7 +99,7 @@
         CALL whileProc1();
         ```
 - ### CONNECT
-  - #### CONNECT TO DATABSE
+  - #### CONNECT / CREATE CURSOR / CREATE DICTIONARY CURSOR
     + ##### CONNECT
       ```python
       import pymysql
