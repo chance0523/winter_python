@@ -131,7 +131,7 @@ SELECT * FROM userTbl WHERE addr LIKE '경%' OR '%남';
 -- 서브쿼리 (Sub Query)
 -- 쿼리문 안에 쿼리문이 들어가는 것
 -- SELECT .. FROM .. WHERE 조건절1 (SELECT .. FROM .. WHERE 조건절2)
--- 주의 사앟 : 서브쿼리의 레코드 결과값은 1개로 유일해야한다.
+-- 주의 사항 : 서브쿼리의 레코드 결과값은 1개로 유일해야한다.
 
 -- userTbl 테이블에서 height  컬럼값이 177 이상인 레코드
 SELECT * FROM userTbl WHERE height > 177;

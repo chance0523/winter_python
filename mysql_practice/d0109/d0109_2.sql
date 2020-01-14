@@ -49,12 +49,13 @@ SELECT userID AS '사용자 아이디',
        
 -- buyTbl 에서 사용자별(GROUP BY) 총 구매액(price*amount)에서
 -- 조건 적용 : 총구매액이 1000보다 큰 레코드만 출력해라
-SELECT userID AS '사용자 아이디',
-	   SUM(price*amount) AS '총구매액'
-       FROM buyTbl
-       -- WHERE SUM(price*amount) > 1000 은 불가 !!!
-       GROUP BY userID
-       HAVING SUM(price*amount) > 1000;
+SELECT 
+    userID AS '사용자 아이디',
+    SUM(price * amount) AS '총구매액'
+FROM
+    buyTbl
+GROUP BY userID
+HAVING SUM(price * amount) > 1000;
 
 -- quiz : buyTbl에서 사용자 아이디 별로 평균 구매 횟수가 1~3인 레코드만 출력하여라
 -- AVG, GROUP BY, HAVING, BETWEEN 이용
