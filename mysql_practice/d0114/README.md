@@ -117,4 +117,7 @@
       cityList = cursor.fetchall()
       print(cityList)
       ```
-    
+    + ##### CREATE DICTIONARY CURSOR
+      ```python
+      cursor = conn.cursor(pymysql.cursors.DictCursor)
+      ```
