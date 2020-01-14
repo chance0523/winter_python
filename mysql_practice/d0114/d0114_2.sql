@@ -57,4 +57,3 @@ END $$
 DELIMITER ;
 
 CALL genderChange2();
-

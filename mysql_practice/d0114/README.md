@@ -1,4 +1,4 @@
-# 1/14 - [IF](#if) / [CASE](#case) / [WHILE](#while)
+# 1/14 - [IF](#if) / [CASE](#case) / [WHILE](#while) / [CONNECT](#connect)
 - ### IF / CASE / WHILE
   - #### IF
     - ##### IF
@@ -98,4 +98,23 @@
         
         CALL whileProc1();
         ```
-       
+- ### CONNECT
+  - #### CONNECT TO DATABSE
+    + ##### CONNECT
+      ```python
+      import pymysql
+
+      conn = pymysql.connect(host='localhost',
+                             port=3306, user='root',
+                             passwd='1234', db='world', charset='utf8')
+      ```
+    + ##### CREATE CURSOR
+      ```python
+      cursor = conn.cursor()
+      cursor.execute(
+          'SELECT * FROM city;'
+      )
+      cityList = cursor.fetchall()
+      print(cityList)
+      ```
+    
