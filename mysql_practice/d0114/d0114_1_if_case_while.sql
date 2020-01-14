@@ -291,3 +291,17 @@ END $$
 DELIMITER ;
 
 CALL titleInfo('Staff');
+CALL titleInfo('Engineer');
+
+
+/*
+특정회원의 정보값(이름...) => 특정 변수에 저장
+SELECT @변수명 := 필드명 FROM 테이블 WHERE 절 LIMIT 숫자;
+*/
+
+SET @test = 100;
+SELECT @test;
+
+SELECT first_name FROM employees LIMIT 1; -- Georgi
+SELECT @test := first_name FROM employees LIMIT 1;
+SELECT @test;
