@@ -149,20 +149,3 @@
 
       CALL calPro(10, 5)
       ```
-  - #### IF
-    - ##### USE IF WITH PROCEDURE
-      ```MYSQL
-      DELIMITER $$
-      CREATE PROCEDURE ifTest1()
-      BEGIN
-        SET @num = 100;
-        IF @num > 100 THEN
-            SELECT '100보다 크다';
-        ELSE
-            SELECT '100보다 작거나 같다';
-        END IF;
-      END $$
-      DELIMITER ;
-        
-      CALL ifTest1();
-      ```
