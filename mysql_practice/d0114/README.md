@@ -1,5 +1,5 @@
-# 1/14 - [IF](#if) / [CASE](#case)
-- ### IF / CASE
+# 1/14 - [IF](#if) / [CASE](#case) / [WHILE](#while)
+- ### IF / CASE / WHILE
   - #### IF
     - ##### IF
       ```MYSQL
@@ -75,3 +75,27 @@
         CALL case_test(90);
         CALL case_test(40);
         ```
+    - #### WHILE
+      - ##### WHILE
+        ```MYSQL
+        DROP PROCEDURE IF EXISTS whileProc1;
+        DELIMITER $$
+        CREATE PROCEDURE whileProc1()
+        BEGIN
+          DECLARE i INT; -- 1에서 100까지 증가할 변수
+          DECLARE sum INT; -- 더한 값을 누적할 변수
+          SET i = 1;
+          SET sum = 0;
+          
+          WHILE (i <= 100) DO
+            SET sum = sum + i;
+            SET i = i + 1;
+          END WHILE;
+          
+          SELECT sum;
+        END $$
+        DELIMITER ;
+        
+        CALL whileProc1();
+        ```
+       
