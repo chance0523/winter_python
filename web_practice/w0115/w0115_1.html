@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html 배우기</title>
+    <!-- CSS, JS 문서 연결 -->
+</head>
+<body>
+<!-- 제목/ Heading 태그 : 진하게 표시
+  h1 ~ h6 : h1 제목1
+  -->
+<h1>제목1</h1>
+<h2>제목2</h2>
+<h3>제목3</h3>
+
+<!-- Emmet 방식으로 코딩
+  h1 누르고 Tab 키 -->
+<!-- h1 [Tab] -->
+<h1>Heading1</h1>
+
+<!-- 연속으로태그 삽입 h1+h2+h3 [Tab] -->
+<h1>1</h1>
+<h2>2</h2>
+<h3>3</h3>
+
+<!--h1{큰제목}+h2{두번째제목}+h3{세번째제목} [Tab]-->
+<h1>큰제목</h1>
+<h2>두번째제목</h2>
+<h3>세번째제목</h3>
+
+<!-- hr : 가로 수평선 삽입 -->
+<hr>
+<hr />
+
+<!-- p 문단
+  <p> 내용물 </p>
+-->
+<!--p{문단1입니다.}+p{문단2입니다.} [Tab]-->
+<p>문단1입니다.</p>
+<p>문단2입니다.</p>
+
+<!-- p{문단1입니다.}*3 -->
+<p>문단1입니다.</p>
+<p>문단1입니다.</p>
+<p>문단1입니다.</p>
+
+<!-- p{문단$입니다.}*3 -->
+<p>문단1입니다.</p>
+<p>문단2입니다.</p>
+<p>문단3입니다.</p>
+<hr>
+
+<!-- 목록문단 태그
+  순서있는 목록 문단
+  앞에 들여쓰기 생성
+  ol : ordered list
+  li : list
+  ol>li
+-->
+
+<ol>
+    <li>사과</li>
+    <li>수박</li>
+    <li>포도</li>
+</ol>
+
+<!-- ol>li{리스트$}*4 -->
+<ol>
+    <li>리스트1</li>
+    <li>리스트2</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+</ol>
+
+<!-- ol>li{감자}+li{고구마}+li{양파} -->
+<ol>
+    <li>감자</li>
+    <li>고구마</li>
+    <li>양파</li>
+</ol>
+
+<!-- 목록문단 태그
+  순서없는 목록 문단 : 불렛목록문단. 리스트 앞에 디스크 표시
+  앞에 들여쓰기 생성
+  ul : unordered list
+  li : list
+  ul>li
+-->
+
+<ul>
+    <li>겨울왕국</li>
+    <li>라이언킹</li>
+    <li>겨울왕국2</li>
+</ul>
+
+<!--ul>li{리스트$}*4-->
+<ul>
+    <li>리스트1</li>
+    <li>리스트2</li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+</ul>
+
+<!--ul>li{겨울왕국}+li{겨울왕국2}-->
+<ul>
+    <li>겨울왕국</li>
+    <li>겨울왕국2</li>
+</ul>
+
+<hr>
+
+<!-- 정의문단
+ dl>dt+dd
+ dl : definition list
+ dt : definition title
+ dd : definition data
+ -->
+
+<dl>
+    <dt>제목</dt>
+    <dd>내용</dd>
+</dl>
+
+<!--dl>(dt{제목$}+dd{내용$})*3-->
+<dl>
+    <dt>제목1</dt>
+    <dd>내용1</dd>
+    <dt>제목2</dt>
+    <dd>내용2</dd>
+    <dt>제목3</dt>
+    <dd>내용3</dd>
+</dl>
+
+<!--dl>dt{교과목}+dd*3-->
+<dl>
+    <dt>교과목</dt>
+    <dd>Python</dd>
+    <dd>MySql</dd>
+    <dd>Web</dd>
+</dl>
+
+<hr>
+<!--
+    br : 문단 안에서 줄바꿈
+    <br> 또는 <br />
+-->
+<p>
+    행1입니다.<br/><br/>
+    행2입니다.<br>
+    행3입니다.
+</p>
+
+<hr>
+
+<!--
+    blockquote
+    인용문에 사용
+    들여쓰기되어 앞뒤에 여백 생성
+-->
+<h2>인사말</h2>
+<blockquote>
+    오늘도 좋은 하루
+</blockquote>
+
+<!--blockquote>blockquote{감기 조심하세요}-->
+<blockquote>
+    <blockquote>감기 조심하세요</blockquote>
+</blockquote>
+
+<hr>
+
+<!--
+    태그 줄바꿈 기준
+    - 인라인요소 : i, em, img, a
+    - 블록요소 : p, blockquote, div, h1~h6, ol li, ul li
+-->
+
+<!-- em / i => 기울임꼴. 인라인 요소
+    strong /b => 진하게. 인라인 요소 -->
+
+<p>
+    아름다운 <strong>밤</strong>입니다. <br>
+    아름다운 <b>밤</b>입니다. <br>
+    아름다운 <em>밤</em>입니다. <br>
+    아름다운 <i>밤</i>입니다.
+</p>
+
+<p>
+    아름다운 <i><b>밤</b></i>입니다.
+</p>
+</body>
+</html>
