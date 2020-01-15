@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS2</title>
+    <style type="text/css">
+    /*
+        선택자(Selector){속성1:값;속성2:값2;}
+        3대 선택자 - 태그선택자/클래스선택자/아이디선택자
+    */
+    /*
+        태그선택자 : 문서에서 특정 태그를 사용하면 동일 디자인 적용
+        태그명 {속성1:값1; ...}
+        ul 태그에 공통적인 디자인 정의
+    */
+    ul {color:red;line-height:200%;font-size:10pt}
+     /*
+        클래스 선택자 : 도트 선택자
+        1) 클래스 정의
+            .클래스이름 {속성1:값1; ...}
+        2) 클래스 정의
+            태그 안에
+            class=클래스이름
+     */
+    /* 클래스 선택자 : 2em, 검정배경, 흰색글자 */
+    .whiteBlack {font-size:2em;background-color:black;color:white}
+    /* 클래스 선택자2 : 이미지 테두리 디자인 */
+    /*
+        테두리 속성
+        border-style: none/solid/double/dotted/dashed/inset/outset
+        border-color: 16진수 색상값이나 색상명
+        border-width: 숫자단위 예) 10px
+
+        border:스타일 색상 굵기
+    */
+    .imgFrame1 {border-style:double;border-color:blue,border-width:20px}
+    .imgFrame2 {border:dashed 1px black}
+
+    /*
+        아이디 선택자 = 샵선택자
+        1) 선택자 등록
+        #아이디이름 {속성:값...}
+        2) 적용
+        태그 안에 id=아이디이름
+    */
+    #olList {border:1px dotted red;background-color:#CCCCCC;}
+    </style>
+</head>
+<body>
+<h1>css2 - Head방식</h1>
+<h2>목록1</h2>
+<ul>
+    <li>목록1</li>
+    <li>목록2</li>
+    <li>목록3</li>
+    <li>목록4</li>
+</ul>
+<h2>목록2</h2>
+<ul>
+    <li>목록1</li>
+    <li>목록2</li>
+    <li>목록3</li>
+    <li>목록4</li>
+</ul>
+<h2>목록3</h2>
+<ul>
+    <li>목록1</li>
+    <li>목록2</li>
+    <li>목록3</li>
+    <li>목록4</li>
+</ul>
+<hr>
+<h2>특정 글자에 디자인 적용</h2>
+<p>
+    <span class="whiteBlack">동물들과 소통하는 특별한 능력</span>을 지닌 닥터 두리틀(로버트 다우니 주니어)은<br>
+    사랑하는 사람을 잃고 세상과 단절한 채 동물들과 친구가 되어 살아간다.<br>
+    어느 날, 여왕에게 알 수 없는 불치병이 생기고 왕국마저 위험에 빠지게 되자, 그의 놀라운 능력만이<br>
+    모든 것을 해결할 수 있음을 알게 된다.<br>
+    세상을 구하기 위해서는 반드시 주어진 시간 안에 누구도 가보지 못했던 신비의 섬을 찾아내야만 하고,<br>
+    두리틀은 친구들과 함께 <span class="whiteBlack">위험천만한 모험</span>을 떠나게 되는데…<br>
+</p>
+
+<h2>이미지</h2>
+<div>
+    <img src="images/boss.png" alt="sorry..." class="imgFrame1">
+    <img src="images/cold.png" alt="sorry..." class="imgFrame2">
+    <img src="images/cry.png" alt="sorry..." class="imgFrame2">
+    <img src="images/cool.png" alt="sorry...">
+</div>
+
+<h2>목록문단 디자인</h2>
+<ol>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+</ol>
+<ol id="olList">
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+</ol>
+</body>
+</html>
