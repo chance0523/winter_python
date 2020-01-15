@@ -30,7 +30,7 @@
 
 <!-- hr : 가로 수평선 삽입 -->
 <hr>
-<hr />
+<hr/>
 
 <!-- p 문단
   <p> 내용물 </p>
@@ -188,5 +188,196 @@
 <p>
     아름다운 <i><b>밤</b></i>입니다.
 </p>
+
+<hr>
+
+<!-- 웹에 삽입할 수 있는 이미지 포맷 : 웹용 이미지
+        png, jpg, gif
+-->
+<!--
+    <img src = 이미지경로 alt = 대체텍스트 >
+    width, height, border
+    인라인 요소
+-->
+<img src="images/ah.png" alt="ah">
+<img src="images/choler.png" alt="choler">
+<img src="images/oh.png" alt="oh">
+
+<!--
+    a : 파일(html, 이미지, 웹상주소)과 연결기능
+    인라인 요소
+    target = "_blank" : 다른 탭에 하이퍼링크 연결문서 표시
+-->
+<hr>
+<h3>방송국 사이트</h3>
+<!--ul>(li>a)*3-->
+<ul>
+    <li><a href="http://www.kbs.co.kr" target="_blank">KBS</a></li>
+    <li><a href="http://www.imbc.com">MBC</a></li>
+    <li><a href="http://www.sbs.co.kr">SBS</a></li>
+</ul>
+
+<hr>
+
+<!--
+    tr : table row - 행
+    td : table data - 셀
+    th : table head - 제목셀, 글내용이 중앙정렬. 진하게 표시
+-->
+
+<!-- 2행 2열 -->
+<table border=1>
+    <tr>
+        <td>1-1</td>
+        <td>1-2</td>
+    </tr>
+    <tr>
+        <td>2-1</td>
+        <td>2-2</td>
+    </tr>
+</table>
+
+<!-- 2행 2열 emmet -->
+<!--table[border=1]>(tr>td{내용}*2)*2-->
+<table border="1">
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+</table>
+
+<!--3행3열 가로크기 300 테두리 셀패딩 5 셀간격 5-->
+<!--table[border=1 width=300 cellpadding=5 cellspacing=5]>(tr>(td{내용}*3))*3-->
+<table border="1" width="300" cellpadding="5" cellspacing="5">
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+</table>
+
+<!--
+    셀 합치기
+    colspan : 가로 합치기
+    rowspan : 세로 합치기
+    주의사항 : 셀을 합치고 나머지는 삭제하거나 주석처리한다.
+-->
+<!--3행3열 만들기-->
+<!--table[border=1]>(tr>td{셀$}*3)*3-->
+<table border="1">
+    <tr>
+        <td colspan="3">셀1</td>
+        <!--        <td>셀2</td>-->
+        <!--        <td>셀3</td>-->
+    </tr>
+    <tr>
+        <td>셀1</td>
+        <td rowspan="2">셀2</td>
+        <td>셀3</td>
+    </tr>
+    <tr>
+        <td>셀1</td>
+        <!--        <td>셀2</td>-->
+        <td>셀3</td>
+    </tr>
+</table>
+
+<!--quiz. pdf p44-->
+<!--table[border=1 width=500 cellpadding=10 cellspacing=0]>(tr>td{}*4)*4-->
+<table border="1" width="500" cellpadding="10" cellspacing="0">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<table border="1" width="500" cellpadding="10" cellspacing="0">
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="2"></td>
+        <!--        <td></td>-->
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <!--        <td></td>-->
+        <td></td>
+        <td rowspan="3"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+        <!--        <td></td>-->
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <!--        <td></td>-->
+        <!--        <td></td>-->
+    </tr>
+</table>
+
+<table border="1" width="500" cellpadding="10" cellspacing="0">
+    <tr>
+        <td rowspan="4"></td>
+        <td></td>
+        <td colspan="2"></td>
+        <!--        <td></td>-->
+    </tr>
+    <tr>
+        <!--        <td></td>-->
+        <td colspan="2"></td>
+        <!--        <td></td>-->
+        <td></td>
+    </tr>
+    <tr>
+        <!--        <td></td>-->
+        <td rowspan="2"></td>
+        <td colspan="2"></td>
+        <!--        <td></td>-->
+    </tr>
+    <tr>
+        <!--        <td></td>-->
+        <!--        <td></td>-->
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
 </body>
 </html>

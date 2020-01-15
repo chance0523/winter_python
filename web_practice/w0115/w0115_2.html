@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼문서</title>
+</head>
+<body>
+<!--h1{폼1}-->
+<h1>폼1</h1>
+<form action="http://www.google.com">
+    <p>
+        <label for="text1">아이디</label>
+        <input type="text" id="text1">
+    </p>
+    <p>
+        <label>제목
+            <input type="text">
+        </label>
+    </p>
+    <!--    p>label[for=text2]{주소}+input:text#text2-->
+    <p><label for="text2">주소</label>
+        <input type="text" name="" id="text2">
+    </p>
+    <p>
+        <label>추천인
+            <input type="text">
+        </label>
+    </p>
+    <!--    암호상자  -->
+    <!--    label[for=pwd1]{암호}+input:password#pwd1-->
+    <p><label for="pwd1">암호</label>
+        <input type="password" name="" id="pwd1">
+    </p>
+    <!--    p<label{암호 재입력}>input:password-->
+    <p>
+        <label>암호 재입력
+            <input type="password">
+        </label>
+    </p>
+
+    <!--    여러 줄 글 상자-->
+    <p>
+        <label for="txt">메세지</label>
+        <textarea name="" id="txt" cols="30" rows="10">메세지를 입력해주세요</textarea>
+    </p>
+    <!--    p>label[for=txt2]{메세지2}+textarea#txt2-->
+    <p>
+        <label for="txt2">메세지2</label>
+        <textarea name="" id="txt2" cols="30" rows="10">메세지입력</textarea>
+    </p>
+
+    <hr>
+    <!--
+    필드셋 : 사각 테두리 생성. 그룹화
+    레전드 : 필드셋안에서 사용. 필드셋의 제목
+    -->
+    <!--    fieldset>legend{검색창}-->
+    <fieldset>
+        <legend>검색창</legend>
+        <!--        p>label[for=search]{검색어입력}+input:text#search-->
+        <p>
+            <label for="search">검색어입력</label>
+            <input type="text" name="" id="search">
+        </p>
+    </fieldset>
+
+    <!--    fieldset>legend{검색창2}+(p>label{검색어2}>input)-->
+    <fieldset>
+        <legend>검색창2</legend>
+        <p><label>검색어2
+            <input type="text"></label></p>
+    </fieldset>
+
+    <hr>
+    <!--
+    라디오 버튼 : 같은 그룹에서 한 개의 선택만 가능
+    같은 그룹에서는 라디오 버튼의 name 속성값이 같아야한다.
+    -->
+    <!--    p>(label+input:radio)*2-->
+    <p>
+    <h3>성별</h3>
+    <label for="gender1">남자</label>
+    <input type="radio" name="gender" id="gender1">
+    <label for="gender2">여자</label>
+    <input type="radio" name="gender" id="gender2">
+    </p>
+
+    <!--    p>h3{학년선택)+(label{$학년}>input:radio)*4-->
+    <p>
+    <h3>학년선택</h3>
+    <label>1학년<input type="radio" name="classChoice" checked></label>
+    <label>2학년<input type="radio" name="classChoice"></label>
+    <label>3학년<input type="radio" name="classChoice"></label>
+    <label>4학년<input type="radio" name="classChoice"></label>
+    </p>
+
+    <hr>
+    <!--
+    체크박스
+    같은 그룹에서 여러개 선택가능
+    -->
+    <p>
+    <h3>취미</h3>
+    <label for="hobby1">등산</label>
+    <!--    input:checkbox-->
+    <input type="checkbox" name="" id="hobby1">
+    <label for="hobby2">게임</label>
+    <input type="checkbox" name="" id="hobby2">
+    <label for="hobby3">요가</label>
+    <input type="checkbox" name="" id="hobby3">
+    </p>
+
+    <!--    p>h3{관심 분야}+(label>input:checkbox)*4-->
+    <p>
+    <h3>관심 분야</h3>
+    <label>부동산<input type="checkbox" name=""></label>
+    <label>영화<input type="checkbox" name=""></label>
+    <label>경제<input type="checkbox" name=""></label>
+    <label>관광<input type="checkbox" name=""></label>
+    </p>
+
+    <hr>
+    <!--
+    버튼
+    form 태그의 action과 연결
+    -->
+    <!--    input:submit[value=전송]-->
+    <!--    input:reset[value=취소]-->
+    <input type="submit" value="전송">
+    <input type="reset" value="취소">
+
+    <!--    button{전송2}-->
+    <!--    input:submit[value=전송]과 동일-->
+    <button>전송2</button>
+
+
+</form>
+
+<hr>
+<h2>퀴즈 : 폼문서 버튼 - 슬라이드 66</h2>
+<form action="">
+    <h2>수강 신청서</h2>
+    <p><label for="name">성명
+        <input type="text" id="name" size="10"></label></p>
+    <p><label for="pwd">비밀키
+        <input type="password" id="pwd" size="10"></label></p>
+    <p><label for="addr">주소
+        <input type="text" id="addr" size="40"></label></p>
+
+    <p>
+        <label>교육과정</label>
+        <select name="edu">
+            <option value="sel" selected><----교육과정을 선택해주세요----></option>
+            <option value="python">Python</option>
+            <option value="MySQL">MySQL</option>
+            <option value="Web">Web</option>
+        </select>
+    </p>
+    <fieldset>
+        <legend>희망 타임</legend>
+        <p>
+            <label>오전 9:00<input type="radio" name="timeChoice" checked></label>
+            <label>오후 1:00<input type="radio" name="timeChoice"></label>
+            <label>오후 7:00<input type="radio" name="timeChoice"></label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>알게된 동기</legend>
+        <p>
+            <label>친구<input type="checkbox" name="dong_gi" checked></label>
+            <label>배너광고<input type="checkbox" name="dong_gi"></label>
+            <label>잡지, 신문<input type="checkbox" name="dong_gi"></label>
+            <label>메일<input type="checkbox" name="dong_gi"></label>
+            <label>기타<input type="checkbox" name="dong_gi"></label>
+        </p>
+    </fieldset>
+    <p>
+        <label for="goong">기타 문의사항</label>
+        <textarea name="moon" id="goong" cols="30" rows="10">궁금한 점을 정확하게 입력하여 주시면 빠른 시일내에 연락드리겠습니다.</textarea>
+    </p>
+    <input type="submit" value="전송">
+    <input type="reset" value="다시">
+</form>
+
+</body>
+</html>
