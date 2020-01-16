@@ -14,7 +14,21 @@
         */
         .pBox1:first-line {font-size:2em}
         .pBox2:first-letter {font-size:2em}
-        .pBox3:first-line {color:magenta}
+        .pBox3 {color:magenta}
+        /* 
+            선택자의 요소가 같아야한다.
+            선택자:first-of-type {속성:값 .. }
+            선택자:last-of-type {속성:값 .. }
+            선택자:nth-of-type(숫자) {속성:값 .. }
+        */
+        /* 
+            부모 요소 기준
+            선택자:first-child {속성:값 .. }
+            선택자:nth-child(숫자) {속성:값 .. }
+        */
+        #box3 {background: yellow;}
+        #box3 p:first-of-type {background: red;}
+        #box3 div:first-of-type {background: green;}
     </style>
 </head>
 
@@ -35,8 +49,14 @@
         이번 합의는 사실상 전면적인 무역전쟁을 벌이던 미중의 첫 합의이며,<br>
         일종의 휴전을 통해 추가적인 확전을 막았다는 점에서도 의미가 있다.<br>
         글로벌 경제에 드리워졌던 불투명성도 다소 완화될 전망이다.<br>
-
     </p>
+    <hr>
+
+    <div id="box3">
+        <p>문단1</p>
+        <p>문단2</p>
+        <p>문단3</p>
+    </div>
 </body>
 
 </html>
