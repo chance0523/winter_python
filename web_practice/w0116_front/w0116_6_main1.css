@@ -1,0 +1,88 @@
+/* 문서 전체 공통 디자인 */
+/* 
+바깥여백
+margin-top / margin-left / margin-right / margin-bottom
+margin:상하 좌우 + 단위
+예) margin:50px 100px;
+margin:공통+단위
+예) margin:100px; => 상하좌우 모두 100px
+margin:12시 3시 6시 9시
+예) margin:30px 40px 50px 60px; 
+*/
+/* 
+안쪽여백
+padding-top / padding-left / padding-right / padding-bottom
+padding:상하 좌우 + 단위
+예) padding:50px 100px;
+padding:공통+단위
+예) padding:100px; => 상하좌우 모두 100px
+padding:12시 3시 6시 9시
+예) padding:30px 40px 50px 60px;
+*/
+body {
+        background-color: cornflowerblue;
+        margin-top:50px;
+        margin-left:100px;
+}
+
+/* 그룹선택자 : 공통속성과 값을 적용 할 때 사용
+선택자1, 선택자2 ... {속성:값 ... } */
+/* 하이퍼링크 디자인 */
+p a:link, p a:visited {color:black;font-size: 2em;text-decoration: none;}
+p a:hover, p a:active {text-decoration: underline;}
+
+/*
+박스모델
+박스모델의 가로크기는?
+  width+border-left+border-right+padding-left+padding-right
+박스모델의 세로크기는?
+  height+border-top+border-bottom+padding-top+padding-bottom
+*/
+/* 200x200[px] */
+#box1 {width: 200px; height: 200px; background-color: red;}
+#box2 {width: 180px; height: 180px; background-color: yellow;
+       border: 10px solid black;}
+#box3 {width: 80px; height: 120px; background-color: blue;
+       border: 20px solid tomato; padding: 20px 40px;}
+
+/* 
+박스모델의 실제크기를 width와 height으로만 산출
+box-sizing:border-box
+*/
+#box4 {box-sizing:border-box; width: 200px; height: 200px; background-color: blue;
+  border: 20px solid tomato; padding: 20px 40px;}
+
+/* 
+display : 레이아웃 변경 시 사용
+display:inline/block/none
+*/
+#nav1 ul li {display: inline;}
+/*
+이미지로 세로로 배치하기
+인라인 요소 => 블록요소
+*/
+#gallery img {display: block;}
+/*  none : 페이지에서 보이지 않게 함 */
+h1 {display: none;}
+
+/* 
+float:left/right : 부모요소를 기준으로 왼쪽이나 오른쪽에 배치한다.
+clear:both : float 레이아웃 해제
+*/
+#mainBox1 {border: 1px solid black; width: 400px; height: 300px;}
+#mainBox1 div {width: 100px;height: 100px; float: left;}
+#mainBox1 div:nth-child(1) {background-color: red;}
+#mainBox1 div:nth-child(2) {background-color: green;}
+#mainBox1 div:nth-child(3) {background-color: blue;}
+
+#mainBox2 {border: 1px solid black; width: 400px; height: 300px;}
+#mainBox2 div {width: 100px;height: 100px; float: right;}
+#mainBox2 div:nth-child(1) {background-color: red;}
+#mainBox2 div:nth-child(2) {background-color: green;}
+#mainBox2 div:nth-child(3) {background-color: blue;}
+
+#mainBox3 {border: 1px solid black; width: 400px; height: 300px;}
+#mainBox3 div {width: 100px;height: 100px;}
+#mainBox3 div:nth-child(1) {background-color: red;float: left;}
+#mainBox3 div:nth-child(2) {background-color: green;float: right;}
+#mainBox3 div:nth-child(3) {background-color: blue;clear: both;}
