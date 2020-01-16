@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <!-- 
+        CSS 정의
+     -->
+    <style>
+         /* 
+            전체선택자 : 전체요소에 디자인 적용. 초기값 지정
+            * {속성:값}
+            문서 전체 디자인 : 줄간격 200%, 글자색상 #666666
+         */
+         * {line-height:200%;color:#666;}
+         /*
+            자손선택자 : 공백을 이용하여 계층찾기
+            부모선택자 자손선택자1 자손선택자2
+         */
+         /* 
+            글자 진하게 하는 속성
+            font-weight:bold/light/숫자 100 200
+         */
+         #box1 li {color:red}
+         #box1 ol li {font-weight: bold;}
+         #box1 ul li {font-size: 2em;}
+         #box1 p {border:1px solid black}
+         #box1 span {background:rebeccapurple;font-size: 1.5em;}
+         /* 
+            자식선택자 : >를 사용. 직계 하위 레벨 찾기
+          */
+        .divBox1>li {color:chartreuse}
+        .divBox1>ul>li {font-size:3em}
+        .divBox2>ul>li {font-weight: bold;}
+        /* 
+            순서선택자
+            선택자(태그/클래스/id...):nth-child(숫자/odd/even) {속성:값}
+        */
+
+        /* #dBox1 안에 있는 첫번째 p */
+        #dBox1 p:nth-child(1) {background-color: yellow;}
+        #dBox1 p:nth-child(3) {background-color: red;}
+        /* #dBox2 안에 있는 짝수/홀수번째 요소 */
+        #dBox2 p:nth-child(odd) {background-color: green;}
+        #dBox2 p:nth-child(even) {background-color: lightcoral;}
+     </style>
+</head>
+<body>
+    <h1>CSS 선택자</h1>
+    <hr>
+    <p>문단1</p>
+    <p>문단2</p>
+    <p>문단3</p>
+    <p>문단4</p>
+    <p>문단5</p>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ul>
+    <ol>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ol>
+    <hr>
+    <!-- 
+        div : 블록요소 - 행 단위
+        span : 인라인요소 - 글자 단위
+     -->
+    <div id="box1">
+        <ol>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ol>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ul>
+        <p>문단 <span>P</span>ython</p>
+    </div>
+    <hr>
+    <div class="divBox1">
+        <ul>
+            <li><a href="">링크1</a></li>
+            <li><a href="">링크2</a></li>
+            <li><a href="">링크3</a></li>
+        </ul>
+    </div>
+    <div class="divBox2">
+        <ul>
+            <li><a href="">링크1</a></li>
+            <li><a href="">링크2</a></li>
+            <li><a href="">링크3</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="dBox1">
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+    </div>
+    <div id="dBox2">
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+    </div>
+</body>
+</html>
