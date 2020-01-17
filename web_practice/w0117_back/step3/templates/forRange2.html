@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for range 반복문 이용 구구단 출력</title>
+    <style>
+        h1 {text-align: center;}
+        h2 {padding-left: 80px;}
+        ul {line-height: 180%; padding-left: 100px;}
+        p {padding-left: 100px;}
+    </style>
+</head>
+<body>
+    <h1>for range 반복문 이용 구구단 출력</h1>
+    <h2>다중 for문 출력</h2>
+    <ul>
+        {% for i in range(2,10) %}
+            <h3>{{i}}단</h3>
+            {% for j in range(1,10) %}
+            <li>{{i}} x {{j}} = {{i*j}}</li>
+            {% endfor %}<hr>
+        {% endfor %}
+    </ul>
+    <p><a href="/">첫페이지로 이동</a></p>
+</body>
+</html>
