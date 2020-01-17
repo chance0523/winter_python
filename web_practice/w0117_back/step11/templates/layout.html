@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <!-- 메뉴 -->
+    <div id="nav">
+        <ul>
+            <li><a href="/">Menu1</a></li>
+            <li><a href="/menu2">Menu2</a></li>
+            <li><a href="/menu3">Menu3</a></li>
+            <li><a href="/menu4">Menu4</a></li>
+            <li><a href="/menu5">Menu5</a></li>
+        </ul>
+    </div>
+    <!-- 컨텐츠 : 변경되는 부분 -->
+    <div>
+        <!-- {% block 이름%} -->
+        <!-- {% endblock %} -->
+        {% block contents%}
+        {% endblock %}
+    </div>
+    
+    <!-- 카피라이트 : 공통 -->
+    <!-- div#footer>p{&copy Logo. Address} -->
+    <div id="footer">
+        <p>&copy Logo. Address</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DATABASE</title>
+</head>
+
+<body>
+    <h1>CONNECT DATABASE</h1>
+    <h2>10개 테이블 전체 출력</h2>
+    {{country_list}}
+    <hr>
+    {% for row in country_list %}
+    {{ row }}<br>
+    {% endfor %}
+
+</body>
+
+</html>
