@@ -10,6 +10,13 @@
         h2 {padding-left: 80px;}
         ul {line-height: 180%; padding-left: 100px;}
         p {padding-left: 100px;}
+
+        /* 블록요소 중앙정렬? margin:auto 0 */
+        /* 인라인요소 중앙정렬? text-align:center */
+        #guguBox {width: 1000px; margin: auto 0;}
+        #guguBox div h3 {text-align: center;}
+        p h2 {text-align: center;}
+        #guguBox div {width: 32%; float: left;}
     </style>
 </head>
 <body>
@@ -23,6 +30,19 @@
             {% endfor %}<hr>
         {% endfor %}
     </ul>
-    <p><a href="/">첫페이지로 이동</a></p>
+    <!-- div를 써서 옆으로 출력도 가능 -->
+    <p><h2>가로 레이아웃</h2></p>
+    <div id="guguBox">
+        {% for i in range(2,10) %}
+        <div>
+            <h3>{{i}}단</h3>
+            {% for j in range(1,10) %}
+            <li>{{i}} x {{j}} = {{i*j}}</li>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <!-- <p><a href="/">첫페이지로 이동</a></p> -->
 </body>
 </html>
+

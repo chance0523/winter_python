@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if문 이용하기</title>
+    <style>
+        h1, h2{text-align: center;}
+        ul {width: 200px; margin: 20px auto;}
+    </style>
+</head>
+<body>
+    <h1>if문 이용하기</h1>
+    <h2>if else</h2>
+    {% if myNum > 0 %}
+    <p>{{myNum}}은 0보다 크다</p>
+    {% else %}
+    <p>{{myNum}}은 0보다 작거나 같다</p>
+    {% endif %}
+    <hr>
+    <h2>if elif else</h2>
+    {% if myNum > 0 %}
+    <p>{{myNum}}은 0보다 크다</p>
+    {% elif myNym < 0 %}
+    <p>{{myNum}}은 0보다 작다</p>
+    {% else %}
+    <p>{{myNum}}은 0이다</p>
+    {% endif %}
+    <hr>
+    <h2>홀수와 짝수에 따라서 메세지 출력하기</h2>
+    {% if myNum2%2 == 0 %}
+    <p>{{myNum2}}은 짝수이다</p>
+    {% else %}
+    <p>{{myNum2}}은 홀수이다</p>
+    {% endif %}
+    <hr size="15" color=black>
+    <h2>quiz. 나이에 따라서 메세지 출력하기</h2>
+    <!-- 
+        7 < userAge < 14 : 초등학생
+        14 <= userAge < 20 : 중고등학생
+        20 <= userAge : 성인
+        그렇지않으면 유아
+    -->
+    나이 : {{userAge}}살 <br>
+    {% if (userAge > 7 and userAge < 14) %}
+    초등학생입니다
+    {% elif (userAge >= 14 and userAge < 20) %}
+    중고등학생입니다
+    {% elif (userAge >= 20) %}
+    성인입니다
+    {% else %}
+    유아입니다
+    {% endif %}
+</body>
+</html>
+
