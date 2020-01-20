@@ -55,6 +55,8 @@ def add_record(c_code, c_name, c_continent, c_population, c_gnp):
     conn.close()
 
 def delete_record(c_code):
+    conn=get_connect()
+
     sql='''
     DELETE FROM countryTb WHERE code=%s;
     '''
@@ -67,7 +69,16 @@ def delete_record(c_code):
 
     conn.close()
 
+def record_view(c_code,c_name,c_continent,c_population,c_gnp):
+    conn=get_country_list()
 
+    sql='''
+    '''
+
+    cursor=conn.cursor()
+    cursor.execute(sql,c_code,c_name,c_continent,c_population,c_gnp)
+    conn.commit()
+    conn.close()
 
 # add_record('GIN', 'Guinea', 'Africa', '7430000', '2352.00')
 # print(get_country_list())

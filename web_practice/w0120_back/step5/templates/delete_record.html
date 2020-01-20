@@ -19,8 +19,8 @@
         <hr>
         <!-- 레코드 추가 버튼 -->
         <p class="text-right">
-            <a href="/" class="btn btn-success">레코드보기</a>
             <a href="/add_record" class="btn btn-info">레코드추가</a>
+            <a href="/" class="btn btn-success">레코드보기</a>
         </p>
         <hr>
         <h2>레코드 삭제</h2>
@@ -43,20 +43,16 @@
                     <td>{{dictRow.Continent}}</td>
                     <td>{{dictRow.Population}}</td>
                     <td>{{dictRow.GNP}}</td>
-                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                    <!-- 
+                        하이퍼링크를 통해 값(dictRow.Code)을 넘겨줘야 함 
+                        페이지주소?변수1=변수2
+                        레코드삭제함수?매개변수=파이썬데이터값
+                    -->
+                    <td><a href="delete_record_pro?c_code={{dictRow.Code}}" class="btn btn-danger">Delete</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <br><br>
-        <hr>
-        <h2>세로로 테이블 출력</h2>
-        <!-- {{country_list}} -->
-        <hr>
-        {% for row in country_list %}
-        {{ row }}<br>
-        <hr>
-        {% endfor %}
     </div>
 </body>
 
