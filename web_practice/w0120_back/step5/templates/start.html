@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DATABASE</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>레코드 모두 보기</h1>
+        <hr>
+        <!-- 레코드 추가 버튼 -->
+        <p class="text-right">
+            <a href="/add_record" class="btn btn-info">레코드추가</a>
+            <a href="/delete_record" class="btn btn-danger">레코드삭제</a>
+        </p>
+        <hr>
+        <h2>countryTb 테이블 출력</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr class="danger">
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Continent</th>
+                    <th>Population</th>
+                    <th>GNP</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dictRow in country_list %}
+                <tr class="warning">
+                    <td>{{dictRow.Code}}</td>
+                    <td>{{dictRow.Name}}</td>
+                    <td>{{dictRow.Continent}}</td>
+                    <td>{{dictRow.Population}}</td>
+                    <td>{{dictRow.GNP}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h2>세로로 테이블 출력</h2>
+        <!-- {{country_list}} -->
+        <hr>
+        {% for row in country_list %}
+        {{ row }}<br>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

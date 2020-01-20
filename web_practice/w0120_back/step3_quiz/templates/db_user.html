@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DATABASE</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>CONNECT DATABASE</h1>
+        <h2>usertbl 테이블 출력</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr class="danger">
+                    <th>userID</th>
+                    <th>name</th>
+                    <th>birthYear</th>
+                    <th>addr</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in user_list %}
+                <tr class="warning">
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h2>세로로 테이블 출력</h2>
+        <!-- {{country_list}} -->
+        <hr>
+        {% for row in user_list %}
+        {{ row }}<br>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
