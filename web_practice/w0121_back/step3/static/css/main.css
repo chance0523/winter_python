@@ -1,0 +1,8 @@
+/* static/css/main.css */
+h1, div {text-align: center;}
+ul {width: 200px; margin: 20px auto;}
+a:visited, a:link {text-decoration: none; color: black;}
+a:hover {text-decoration: underline;}
+
+/* 블렛 디스크 없애기 */
+ul {list-style:none}

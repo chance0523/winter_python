@@ -21,6 +21,7 @@
         table td {
             text-align: center;
         }
+        #pageBox  {width: 80%; margin:20px auto}
     </style>
 </head>
 
@@ -56,14 +57,21 @@
         </table>
     </div>
     <div id="pageBox">
+        <!-- total_page = {{total_page}} -->
         <!-- <h2>페이징</h2> -->
-        <ul class="pagination pagination-lg">
+        <!-- <ul class="pagination pagination-lg">
             <li><a href="/page_list?page=0">1</a></li>
             <li><a href="/page_list?page=5">2</a></li>
             <li><a href="/page_list?page=10">3</a></li>
             <li><a href="/page_list?page=15">4</a></li>
             <li><a href="/page_list?page=20">5</a></li>
             <li><a href="/page_list?page=25">6</a></li>
+        </ul> -->
+        <ul class="pagination pagination-lg">
+            <li><a href="/">TOTAL</a></li>
+            {% for i in range(0,total_page)%}
+            <li><a href="/page_list?page={{i*5}}">{{i+1}}</a></li>
+            {% endfor %}
         </ul>
     </div> <!-- end div#container -->
 </body>
