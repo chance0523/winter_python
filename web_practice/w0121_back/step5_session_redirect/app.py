@@ -1,7 +1,7 @@
 # step1
 #
 
-from flask import Flask, request, session
+from flask import Flask, request, session, redirect
 from flask import render_template
 import db
 
@@ -35,9 +35,9 @@ def logout():
     # 세션 아웃 1 : del session[변수]
     # 세션 아웃 2 : session.pop(변수, None)
     del session['userId']
-    return render_template('index_login.html')
+    return redirect('/')
 
-# render_template('.html', 전달변수=전달변수값)
+# render_template(주소, 전달변수=전달변수값)
 # redirect(주소)
 
 app.run(host='127.0.0.1', port=5000, debug=True)

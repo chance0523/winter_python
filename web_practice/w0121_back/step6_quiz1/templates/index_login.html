@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">HOME</h1>
+        <hr>
+        <form action="/login_pro" method='GET'>
+            <div class="form-group">
+                <label for="userId">ID:</label>
+                <input type="text" class="form-control" id="userId" name="userId">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-success form-group">login</button>
+            <a href="/join" class="btn btn-info">join</a>
+        </form>
+    </div>
+</body>
+
+</html>

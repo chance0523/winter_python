@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>user data</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- 부트스트랩 설치  : start2.html  -->
+    <link rel='stylesheet' href='static/css/bootstrap.min.css'>
+    <script src='static/js/jquery.min.js'></script>
+    <script src='static/js/bootstrap.min.js'></script>
+
+    <!-- 사용자정의 css   -->
+    <style>
+        th {
+            width: 30%;
+            background-color: beige
+        }
+
+        td,
+        th {
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">{{result_data[0]}} 레코드 보기</h1>
+        <hr>
+        <p class="text-right">
+            <a href="/" class="btn btn-danger">전체 레코드 보기 </a>
+        </p>
+        <hr>
+        <h2>user data</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>userId</th>
+                <td>{{result_data[0]}}</td>
+            </tr>
+            <tr>
+                <th>password</th>
+                <td>{{result_data[1]}}</td>
+            </tr>
+            <tr>
+                <th>email</th>
+                <td>{{result_data[2]}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
