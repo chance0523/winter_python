@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS1</title>
+</head>
+<body>
+<h1>CSS</h1>
+<h2>인라인방식</h2>
+<!-- 태그 안에 style='속성1:값1;속성2:값2.... -->
+<!-- css 색상 속성
+color : 영문 색상명 / 16진수 색상명
+
+배경색상
+background-color:영문색상명/16진수색상명
+background:영문색상명/16진수색상명
+
+16진수색상값은?
+#000000(검정) ~ #FFFFFF(흰색)
+#FF0000(RED), #00FF00(GREEN), #0000FF(BLUE)
+
+글자크기는?
+font-size:숫자단위(em/px/pt)
+9pt = 11px
+-->
+<h2 style="color:red; background-color:yellow">제목</h2>
+<h3 style="font-size:100px; color:#666666">제목</h3>
+
+<!--
+줄간격
+line-height:숫자단위(%/px);
+line-height:180%;
+
+글꼴
+font-family:글꼴명;
+font-family:글꼴명1 글꼴명2;
+"맑은 고딕 / 돋움 / 궁서 / 굴림"
+arial ...
+-->
+<p style="line-height:180%; font-size:11pt; color:green">
+    새로운 미래를 결정지을 운명을 건 대결<br>
+    마침내 영웅은 전설이 된다!<br>
+    더욱 강력해진 포스로 돌아온 ‘레이’는<br>
+    전 우주를 어둠의 힘으로 지배하려는 ‘카일로 렌’에게 대적할<br>
+    유일한 히로인으로 거듭난다.
+</p>
+
+<p style="font-family:'궁서'">
+    새로운 미래를 결정지을 운명을 건 대결<br>
+    마침내 영웅은 전설이 된다!<br>
+    더욱 강력해진 포스로 돌아온 ‘레이’는<br>
+    전 우주를 어둠의 힘으로 지배하려는 ‘카일로 렌’에게 대적할<br>
+    유일한 히로인으로 거듭난다.
+</p>
+
+<!--
+정렬
+text-align:center/right/left/justify(균등정렬)
+
+글자와 글자 사이의 간격
+letter-spacing:숫자단위
+
+단어와 단어 사이의 간격
+word-spacing:숫자단위(px)
+
+색상명 참조
+https://www.w3schools.com/colors/colors_names.asp
+-->
+<ul style="text-align:center;line-height:200%">
+    <li>목록1</li>
+    <li>목록2</li>
+    <li>목록3</li>
+    <li>목록4</li>
+</ul>
+
+<h4 style="letter-spacing:10px;word-spacing:30px;color:blue">Python MySQL FLASK</h4>
+
+</body>
+</html>
